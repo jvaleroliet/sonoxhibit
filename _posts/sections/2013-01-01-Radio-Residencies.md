@@ -2,6 +2,6 @@
 published: true
 layout: default
 
-title: Radio Residencies
+title: Radio
 category: section
 ---
