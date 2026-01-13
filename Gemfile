@@ -33,9 +33,3 @@ platforms :windows, :jruby do
 gem "webrick", "~> 1.7"
 gem "csv"
 gem "base64"
-# Additional gems for indexhibit
-gem 'rake'
-gem 'RedCloth'
-gem 'sass', '3.1.16'
-gem 'compass', '0.12.2'
-gem 'semver'
