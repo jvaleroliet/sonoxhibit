@@ -2,8 +2,8 @@
 published: true
 layout: default
 
-title: ¿Qué es Prose.io?
-section: ¡Tutoriales!
+title: Radio Flouka
+section: Radio
 category: exhibit
 ---
 

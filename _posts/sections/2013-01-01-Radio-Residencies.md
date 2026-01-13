@@ -2,6 +2,6 @@
 published: true
 layout: default
 
-title: Concursos seleccionados
+title: Radio Residencies
 category: section
 ---
