@@ -43,7 +43,7 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 #exhibit li{ list-style-type: disc; margin-bottom: 0.5em; margin-top: 0.5em;}
 
 /* image styling */
-#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em;}
+#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 100%; height: auto; display: block;}
 #exhibit img.sinBorde{ border: none;}
 
 /* highlighter style - maybe you want to change colors? */
