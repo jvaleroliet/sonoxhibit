@@ -25,5 +25,5 @@ picture:
   source: "src/Images"
   output: "src/Images/generated"
   suppress_warnings: true
-  disabled: true
+  disabled: false
   
