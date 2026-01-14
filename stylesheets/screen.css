@@ -267,6 +267,7 @@ div[style*="max-width"] img {
   max-width: 100% !important;
   width: 100% !important;
   height: auto !important;
+  align-items: left !important;
 }
 
 /* ============================================
