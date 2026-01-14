@@ -43,9 +43,8 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 #exhibit li{ list-style-type: disc; margin-bottom: 0.5em; margin-top: 0.5em;}
 
 /* image styling */
-#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 100%; height: auto; display: block; width: 100%;}
+#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 450px; width: 100%;}
 #exhibit img.sinBorde{ border: none;}
-#exhibit picture { max-width: 100%; display: block; width: 100%; }
 
 /* highlighter style - maybe you want to change colors? */
 .highlight { background: #ccff00; color: #000; }
@@ -53,8 +52,7 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 /* never adjust the margin or padding here unless you seriously know what you are doing */
 /* think #index .container and #exhibit .container for only padding adjustments */
 #index { width: 215px; background: #fff; /* line-height: 1.3em; */ }
-#exhibit { margin: 0 0 0 215px; max-width: calc(100vw - 215px); }
-#exhibit .container { box-sizing: border-box; max-width: 100%; }
+#exhibit { margin: 0 0 0 215px; }
 
 /* styling the index */
 #index ul { list-style: none; margin: 0; }
