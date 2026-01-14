@@ -43,12 +43,20 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 #exhibit li{ list-style-type: disc; margin-bottom: 0.5em; margin-top: 0.5em;}
 
 /* image styling */
-#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 100%; height: auto; display: block;}
+#exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 100%; height: auto; display: block; width: 100%;}
 #exhibit img.sinBorde{ border: none;}
 
 /* jekyll_picture_tag responsive sizing */
-#exhibit picture { max-width: 100%; display: block; }
+#exhibit picture { max-width: 100%; width: 100%; display: block; }
 #exhibit picture img { max-width: 100%; width: 100%; height: auto; display: block; }
+
+/* Image wrapper container for constraining size */
+div[style*="max-width"] picture,
+div[style*="max-width"] img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
 
 /* highlighter style - maybe you want to change colors? */
 .highlight { background: #ccff00; color: #000; }
