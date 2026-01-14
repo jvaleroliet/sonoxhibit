@@ -1,0 +1,141 @@
+---
+published: false
+layout: default
+
+title: "mediaphone/wax"
+section: Radio
+category: exhibit
+---
+
+# Wax Cylinders and the Early History of Sound Recording in the Mediterranean
+
+<br>
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2244466652&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sonomayrit" title="sonomayrit" target="_blank" style="color: #cccccc; text-decoration: none;">sonomayrit</a> · <a href="https://soundcloud.com/sonomayrit/db9b6858-8f45-45a4-a1f7-b6eef06e2989" title="sono mayrit - aguaespejo: mediaphone/wax, Radio Alhara, 21.12.25" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit - aguaespejo: mediaphone/wax, Radio Alhara, 21.12.25</a></div>
+
+<br>
+
+## The wax cylinder as a commercial item: The Flamenco Cylinders
+
+<br>
+
+This first part of Mediaphone looks at the earliest moments of sound recording in the Mediterranean basin, starting from a fragile and often overlooked object: the wax cylinder.
+
+{% picture jpt-webp  "projects/waxcylinder1.png"%}
+
+
+The sound that opens the program is a Peteneras from _El Mochuelo_, recorded in 1907. It was captured using a phonograph, a late nineteenth-century technology and the first system capable of both recording and reproducing sound. The process was entirely mechanical. Sound vibrations moved a diaphragm and were engraved as a continuous groove onto the surface of a rotating wax cylinder. When played back, that groove was traced again and the sound re-emerged.
+
+Wax cylinders were the first widely used sound recording format, and also one of the most vulnerable. They were highly sensitive to heat and humidity, and they wore down quickly with repeated playback. Many cylinders deteriorated within a few years of being made. What survives today is often partial, noisy, or damaged. Even so, the phonograph introduced a decisive shift. Sound could now be fixed into an object, stored, transported, and circulated independently of live performance.
+
+{% picture jpt-webp  "projects/waxcylinder1b.png" %}
+
+
+In Spain, early commercial recording focused heavily on flamenco. Singers were recorded extensively, and forms such as peteneras, seguiriyas, and malagueñas were among the repertoires captured on wax cylinders. These recordings document specific ways of singing shaped by Andalusian, and especially Romani-Gitano, communities and working-class environments. At the same time, they reflect a moment when southern Spain was increasingly folklorized and exoticized through Northern European cultural frameworks, producing a particular form of internal orientalism within Europe.
+
+---
+<br>
+
+## The wax cylinder as musical investigation tools: Bela Bartok in Turkey
+
+<br>
+
+Around the same period, recording technologies began to attract the attention of musicians and composers interested in traditional music, not as commercial material, but as something to be documented and studied. In these cases, the phonograph functioned as a research tool. It allowed melodies, rhythms, and performance practices to be captured directly, often in rural contexts where music circulated orally and was closely tied to everyday life.
+
+Two central figures in this history are Romanian musicologist Constantin Brăiloiu and the Hungarian composer Béla Bartók. Bartók, in particular, carried out extensive field recording work across Hungary, Romania, and Turkey. In 1936, he traveled to Anatolia to record secular songs and instrumental traditions among village and Yörük communities in southern Turkey[^Turkey].
+
+{% picture jpt-webp  "projects/waxcylinder2.webp"%}
+
+These wax cylinders document local vocal and instrumental practices connected to work, seasonal cycles, and community celebrations. Bartók was interested in how these melodies related to one another across regions. Rather than treating traditions as isolated national forms, he listened for musical connections across Anatolia, the Balkans, and the wider Mediterranean.
+
+By the time Bartók made these recordings, the phonograph was no longer dominant in commercial sound reproduction. Formats such as [shellac discs](https://web.archive.org/web/20251206233833/https://psap.library.illinois.edu/collection-id-guide/phonodisc) had largely replaced it. Yet the phonograph remained useful for fieldwork due to its portability and its adaptability to outdoor recording conditions.
+
+---
+<br>
+
+## The wax cylinder as a tool of control: North African archives in Berlin and Paris
+
+<br>
+
+### Tunisian cylinders
+
+<br>
+
+More broadly, sound recording in the early twentieth century became embedded in research and colonial forms of knowledge production.
+
+In ethnography and related disciplines, researchers used the phonograph to record music directly where it was performed, with the aim of documenting musical structures, vocal techniques, and performance practices. One important example is the work carried out in Tunisia during the 1920s by the German scholar Robert Lachmann[^Lachman].
+
+His wax cylinder recordings document a wide range of musical practices associated with different communities. They include Jewish liturgical and paraliturgical songs from the island of Djerba, rooted in a long-standing Jewish presence in southern Tunisia[^Lachman1]. They also include recordings labeled as Bedouin music, documenting rural and nomadic vocal traditions from south-eastern regions of the country[^Lachman2]. These recordings capture music tied to religious life, oral transmission, and local social environments.
+
+The material produced during this fieldwork was not archived locally. Instead, it was transferred to institutions in Europe.
+
+At the beginning of the twentieth century, large phonographic collections were centralized in archives such as the Berliner Phonogramm-Archiv[^berliner1] and the Vienna Phonogrammarchiv[^Vienna]. Founded around 1900, these institutions aimed to document and classify musical and linguistic traditions from outside Western Europe. In practice, this meant that recordings from the Mediterranean and other regions were gathered, transported, and preserved in central European collections. Operating within broader colonial and imperial frameworks, these archives played a decisive role in shaping how recorded music was categorized, contextualized, and understood. As a result, much of the earliest phonographic documentation of non-Western musical traditions is preserved far from the places where it was recorded.
+
+Some recent initiatives attempt to address these issues by improving access and reconsidering archival practices, especially in relation to recordings from the Arab world[^access].
+
+{% picture jpt-webp  "projects/waxcylinder4.jpg"%}
+
+---
+<br>
+
+### Algerian cylinders
+
+<br>
+
+Early phonographic recording in Algeria offers another revealing example.
+
+The recordings made during 1935 and 1936 document musical practices of Chaouïa Amazigh communities living in the Aurès mountains, a rural region of eastern Algeria. The wax cylinders capture collective vocal performances and instrumental pieces associated with social gatherings, seasonal rituals, and communal life.
+
+These recordings preserve oral traditions transmitted outside written notation. At the same time, they reflect the growing influence of colonial ethnography, which increasingly sought to record and classify Amazigh cultures, often framing these traditions as timeless or isolated while removing their cultural expressions from local contexts and depositing them in metropolitan archives.
+
+Today, these recordings are preserved in the archives of Université Paris Nanterre, accessible online [^Nanterre].
+
+---
+<br>
+
+## The wax cylinder as an orientalization tool: Universal Exposition of 1900
+
+<br>
+
+Within the same archival collections, we also encounter recordings produced specifically for the Universal Exposition of 1900 in Paris [^Nanterre2].
+
+{% picture jpt-webp  "projects/waxcylinder5.png"%}
+
+These recordings were created for exhibition rather than research. They reflect the logic of world fairs at the turn of the century, where music was presented as cultural display, detached from its original contexts and arranged to fit imperial narratives. Examples include Kabyle, Moroccan, and Syrian songs recorded for the exposition.
+
+---
+<br>
+
+## Access to the waxes: Adriatic and Palestinian cylinders
+
+<br>
+
+We will finally end the program by continuing our exploration of the Berliner Phonogramm-Archiv, this time from the Adriatic Sea region to Palestine[^Palestine], reflecting how access to these early phonographic recordings remains limited, especially for researchers and for communities in the regions where the music was originally recorded. Many of these collections were created within colonial frameworks and remain difficult to access online today. This raises important questions about control, circulation, and responsibility when it comes to recorded cultural heritage. A critical approach to these archives is necessary. This means acknowledging the historical conditions under which the recordings were produced, while also rethinking how they might be shared, contextualized, and engaged with in more equitable ways.
+
+{% picture jpt-webp  "projects/waxcylinder3.jpg"%}
+
+
+The next part of Mediaphone will continue this exploration by turning to shellac recordings, the format that followed wax cylinders and played a central role in shaping the circulation of Mediterranean music throughout the twentieth century.
+
+
+# References
+
+[^Turkey]: _Famous travelers to Türkiye: Bela Bartok, Hungarian composer, collector of folk music_, [Daily Sabah](https://web.archive.org/web/20250429073042/https://www.dailysabah.com/arts/portrait/famous-travelers-to-turkiye-bela-bartok-hungarian-composer-collector-of-folk-music)
+
+
+[^Lachman]: _From Wax Cylinder to Metal Disc: Transplanting Robert Lachmann's "Oriental Music" Project from Berlin to Jerusalem on the Eve of World War II_, [the world of music](https://wom-journal.org/wom/article/view/1428/1436)
+[^Lachman1]: _Lachmann 1929 (174 Lachmann Tunesien)_, [lachmann.tn](https://www.lachmann.tn/collection/1392)
+
+[^Lachman2]: _Lachmann 1927 (165 Lachmann Bedouin)_, [lachmann.tn](https://www.lachmann.tn/collection/1391)
+
+[^berliner1]: _The Collections of Music from the Arab World in the Berlin Phonogramm-Archiv_, [the world of music](https://journals.uni-goettingen.de/wom/article/download/1425/1430?inline=1)
+
+[^Vienna]: _The Complete Historical Collections 1899-1950_, [Austrian Academy of Sciences](https://www.oeaw.ac.at/en/phonogrammarchiv/publications/audio-and-video-publications/the-complete-historical-collections-1899-1950)
+
+[^access]: _Access to Waxes – The Collections from the Arab World of the Berlin Phonogramm-Archiv: Between Digitization, "Repatriation," and Online Publication_, [the world of music](https://wom-journal.org/wom/article/view/1422)
+
+[^Nanterre1]: _Mission Algérie - Aurès 1936 (enregistrements sur cylindres)_, [LESC - CREM](https://archives.crem-cnrs.fr/archives/corpus/CNRSMH_Cylindres_003/)
+
+[^Nanterre2]: _Exposition Universelle 1900: sélection numérisée en 2005_, [LESC - CREM](https://archives.crem-cnrs.fr/archives/collections/CNRSMH_I_2005_002/)
+
+[^Palestine]: _Helfritz Palestine_, [Deustche Digitale Bibliothek](https://ccc.deutsche-digitale-bibliothek.de/en/item/2GD6HWFGIDNXT7KXH3WUS3DETDSYGIRB)
