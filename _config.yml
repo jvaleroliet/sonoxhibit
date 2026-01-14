@@ -25,4 +25,5 @@ picture:
   source: "src/Images"
   output: "src/Images/generated"
   suppress_warnings: true
-  processor: vips
+  disabled: true
+  

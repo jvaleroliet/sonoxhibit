@@ -17,8 +17,6 @@ group :jekyll_plugins do
 	gem "jekyll-feed"
 	gem "jekyll-paginate"
 	gem 'jekyll_picture_tag', '~> 2.1.3'
-	# gem 'jekyll-postcss-v2'
-  
   end
 
 
