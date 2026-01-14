@@ -250,13 +250,13 @@ h4 {
 /* jekyll_picture_tag responsive sizing */
 #exhibit picture {
   max-width: 100%;
-  width: 100%;
+  width: auto;
   display: block;
 }
 
 #exhibit picture img {
   max-width: 100%;
-  width: 100%;
+  width: auto;
   height: auto;
   display: block;
 }
@@ -265,8 +265,13 @@ h4 {
 div[style*="max-width"] picture,
 div[style*="max-width"] img {
   max-width: 100% !important;
-  width: 100% !important;
+  width: auto !important;
   height: auto !important;
+}
+
+div[style*="max-width"] {
+  margin: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* ============================================
