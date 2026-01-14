@@ -45,6 +45,7 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 /* image styling */
 #exhibit img{ border: 1px solid #ddd; margin-bottom: 1em; margin-top: 1em; max-width: 100%; height: auto; display: block;}
 #exhibit img.sinBorde{ border: none;}
+#exhibit picture { max-width: 100%; display: block; }
 
 /* highlighter style - maybe you want to change colors? */
 .highlight { background: #ccff00; color: #000; }
@@ -53,6 +54,7 @@ h4 { font-size: 13px; margin-bottom: 1em; margin-top: 1em; }
 /* think #index .container and #exhibit .container for only padding adjustments */
 #index { width: 215px; background: #fff; /* line-height: 1.3em; */ }
 #exhibit { margin: 0 0 0 215px; }
+#exhibit .container { box-sizing: border-box; }
 
 /* styling the index */
 #index ul { list-style: none; margin: 0; }
