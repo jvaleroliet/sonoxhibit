@@ -35,7 +35,7 @@
 						<li><span id='section_title_{{ section.id }}' class='section_title'>{{ section.title }}</span>
 						{% for exhibit in site.categories.exhibit %}
 							<ul>
-							{% if exhibit.section == section.title %}
+							{% if exhibit.section == section.title and exhibit.hidden != true  %}
 								<li id='exhibit_{{exhibit.id}}' class='exhibit_title'><a href='{{exhibit.url}}'>{{exhibit.title}}</a></li>
 							{% endif %}
 							</ul>
