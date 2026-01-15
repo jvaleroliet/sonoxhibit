@@ -322,7 +322,8 @@ div[style*="max-width"] {
 #index ul.section span.section_title a {
   cursor: pointer;
   font-weight: normal;
-  /* font-size: 18px; */
+  /* font-size: 15px; */;
+  font-weight: bold;
 }
 
 /* styles for hovering section titles */
@@ -354,7 +355,7 @@ div[style*="max-width"] {
 
 #index ul.section li.exhibit_title a:link { }
 
-#index ul.section li.exhibit_title a:hover { }
+#index ul.section li.exhibit_title a:hover {background-color: #00fff7; }
 
 #index ul.section li.exhibit_title a:active { }
 
