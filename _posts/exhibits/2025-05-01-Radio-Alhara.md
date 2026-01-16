@@ -15,7 +15,7 @@ Navigating through archival research, immersive field recordings, a deconstructi
 
 Broadcasting every third Sunday of the month at 11:00 Palestinian time, 10:00 CET.
 
-[Access to the tracklist and notes of episodes here.]({{site.url}}/Radio-Alhara-Index){:target="_blank"}
+[Access to the tracklist and notes of episodes here.]({{site.url}}/exhibit/Radio-Alhara-Index){:target="_blank"}
 
 
 <br>
