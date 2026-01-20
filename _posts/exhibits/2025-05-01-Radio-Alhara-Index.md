@@ -33,14 +33,14 @@ Collection of episodes from *Aguaespejo* radio show on [Radio Alhara](https://ra
 
 ## tape zin:es
 <div style="max-width: 40%; margin: 0 auto;">
-{% picture jpt-webp  "projects/radioalhara/2509.png" %}
+    {% picture jpt-webp  "projects/radioalhara/2509.png" %}
 </div>
 
 <br>
 
 ## interferences
 <div style="max-width: 40%; margin: 0 auto;">
-{% picture jpt-webp  "projects/radioalhara/2510.png" --link {{site.url}}/Interferences %}
+    {% picture jpt-webp  "projects/radioalhara/2510.png" --link {{site.url}}/Interferences %}
 </div>
 
 Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
@@ -49,14 +49,14 @@ Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
 
 ## urbs soni
 <div style="max-width: 40%; margin: 0 auto;">
-{% picture jpt-webp  "projects/radioalhara/2511.png" %}
+    {% picture jpt-webp  "projects/radioalhara/2511.png" %}
 </div>
 
 <br>
 
 ## mediaphone/wax
 <div style="max-width: 40%; margin: 0 auto;">
-{% picture jpt-webp  "projects/radioalhara/2512.png" --link {{site.url}}/Radio-Alhara2512 %}
+    {% picture jpt-webp  "projects/radioalhara/2512.png" --link {{site.url}}/Radio-Alhara2512 %}
 </div>
 
 Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}
@@ -65,5 +65,5 @@ Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}
 
 ## mediaphone/shellac
 <div style="max-width: 40%; margin: 0 auto;">
-{% picture jpt-webp  "projects/radioalhara/2601.png"%}
+    {% picture jpt-webp  "projects/radioalhara/2601.png"%}
 </div>

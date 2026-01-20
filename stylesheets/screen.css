@@ -180,7 +180,7 @@ h1 {
   margin-bottom: 1em;
   margin-top: 1em;
   font-weight: bold;
-  width: 550px;
+  width: 60%;
 }
 
 h2 {
@@ -188,7 +188,7 @@ h2 {
   margin-bottom: 1em;
   margin-top: 1em;
   font-weight: bold;
-  width: 550px;
+  width: 60%;
 }
 
 h3 {
@@ -196,7 +196,7 @@ h3 {
   margin-bottom: 1em;
   margin-top: 1em;
   font-weight: bold;
-  width: 550px;
+  width: 60%;
 }
 
 h4 {
@@ -212,7 +212,7 @@ h4 {
 }
 
 #exhibit p, code, blockquote {
-  width: 450px;
+  width: 60%;
   margin-bottom: 1em;
   /* line-height: 1.3em; */
 }
@@ -223,7 +223,7 @@ h4 {
   margin-bottom: 1.5em;
   margin-top: 1em;
   padding-left: 1em;
-  width: 450px;
+  width: 60%;
 }
 
 #exhibit ol {
@@ -231,7 +231,7 @@ h4 {
   margin-bottom: 1.5em;
   margin-top: 1em;
   padding-left: 1.5em;
-  width: 450px;
+  width: 60%;
 }
 
 #exhibit ul li {
