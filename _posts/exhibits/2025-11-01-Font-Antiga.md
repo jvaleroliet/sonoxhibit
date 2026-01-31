@@ -3,7 +3,7 @@ published: true
 layout: default
 
 title: La Font Antiga
-section: Projects
+section: Works
 category: exhibit
 ---
 

@@ -3,7 +3,7 @@ published: true
 layout: default
 
 title: Ambient Boxes
-section: Projects
+section: Works
 category: exhibit
 ---
 

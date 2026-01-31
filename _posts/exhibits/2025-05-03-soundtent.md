@@ -3,7 +3,7 @@ published: true
 layout: default
 
 title: Soundcamp Reveil 2025
-section: Projects
+section: Works
 category: exhibit
 ---
 

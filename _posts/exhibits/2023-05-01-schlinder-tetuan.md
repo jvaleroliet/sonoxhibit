@@ -3,7 +3,7 @@ published: true
 layout: default
 
 title: Tetuan, Tetuán, Titwan
-section: Projects
+section: Works
 category: exhibit
 ---
 

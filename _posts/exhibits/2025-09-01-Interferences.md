@@ -3,7 +3,7 @@ published: true
 layout: default
 
 title: Radio Interferences
-section: Projects
+section: Works
 category: exhibit
 ---
 
