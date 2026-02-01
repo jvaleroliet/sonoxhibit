@@ -7,6 +7,16 @@
    MODERN CSS RESET
    Based on best practices from modern frameworks
    ============================================ */
+@font-face {
+  font-family: 'Suisse';
+  src: url(../src/Fonts/SuisseIntl-Light.otf) format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Neureal';
+  src: url(../src/Fonts/NeurealTrial-Mono.otf) format('opentype');
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -116,6 +126,7 @@ body.visual_index { /* background: green; */ }
   position: fixed;
   height: 100%;
   z-index: 1;
+  line-height: 1.5em;
 }
 
 #exhibit {
@@ -129,7 +140,7 @@ body.visual_index { /* background: green; */ }
 
 body {
   font-size: 13px;
-  font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+  font-family: 'Suisse', sans-serif;
   background: #fff;
   color: #000;
   line-height: 1.3em;
@@ -140,7 +151,7 @@ body {
 /* you can customize links further down the page too */
 a:link {
   text-decoration: none;
-  color: #000;
+  color: #666;
 }
 
 a:active {
@@ -155,6 +166,10 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+.top a:hover {
+  text-decoration: wavy underline !important;
 }
 
 a img {
@@ -336,8 +351,9 @@ div[style*="max-width"] {
 #index ul.section span.section_title a {
   cursor: pointer;
   font-weight: normal;
-  /* font-size: 15px; */;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Neureal', monospace;
 }
 
 /* styles for hovering section titles */
@@ -408,13 +424,25 @@ div[style*="max-width"] {
 /* top/bot divs - not really used but do exist */
 #index .top {
   /* height: 36px; */
+  font-family: 'Neureal', monospace;
+  font-size: 26px;
 }
 
 #exhibit .top {
   display: none;
 }
 
-#index .bot { }
+.page-title {
+  font-family: 'Neureal', monospace;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+#index .bot {
+  /* font-style: italic; */
+  margin-top: 80px;
+  line-height: 1.2em;
+}
 
 /* generic #img-container - but remember that exhibit formats can override these */
 #img-container { }

@@ -32,7 +32,7 @@
 				</div>
 				{% for section in site.categories.section %}
 					<ul class='section' id='section_{{ section.id }}'>
-						<li><span id='section_title_{{ section.id }}' class='section_title'>{{ section.title }}</span>
+						<li><span id='section_title_{{ section.id }}' class='section_title'>&#42{{ section.title }}</span>
 						{% for exhibit in site.categories.exhibit %}
 							<ul>
 							{% if exhibit.section == section.title and exhibit.hidden != true  %}
@@ -44,7 +44,11 @@
 					</ul>
 				{%  endfor %}
 				<div class='bot'>
-					<p>Page under migration process</p>
+					<ul>	
+						<li><a href="https://soundcloud.com/sonomayrit">soundcloud</a></li>
+						<li><a href="https://instagram.com/sonomayrit">instagram</a></li>
+						<li><a href="mailto:info@sonomayrit.xyz.com">email</a></li>
+					</ul>
 				</div>
 			</div>	
 			</div>
@@ -58,7 +62,7 @@
 						<div class='container'>
 							<div class='top'><!-- --></div>
 							<!-- text and image -->
-							<p><strong>{{ exhibit.title }}</strong></p>
+							<p><div class="page-title">{{ exhibit.title }}</div></p>
 							{{ exhibit.content }}
 							<!-- end text and image -->
 						</div>
@@ -70,7 +74,7 @@
 			<div class='container'>
 				<div class='top'><!-- --></div>
 				<!-- text and image -->
-				<p><strong>{{ page.title }}</strong></p>
+				<p><div class="page-title">{{ page.title }}</div></p>
 				{{ content }}
 				<!-- end text and image -->
 			</div>
