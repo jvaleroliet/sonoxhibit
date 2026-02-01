@@ -19,18 +19,18 @@ The residency took place from October to November 2025 as part of the [Las Cigar
 
 
 
-<div style="max-width: 60%; margin: 0 auto;">
+<div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/Fuente Antigua_0283.JPG" %}
 </div>
 
-<div style="max-width: 60%; margin: 0 auto;">
+<div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/Fuente Antigua_0193.JPG" %}
 </div>
 
-<div style="max-width: 60%; margin: 0 auto;">
+<div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/Fuente Antigua_0226.JPG" %}
 </div>
 
-<div style="max-width: 60%; margin: 0 auto;">
+<div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/fontantiga_presentacion.JPG" %}
 </div>

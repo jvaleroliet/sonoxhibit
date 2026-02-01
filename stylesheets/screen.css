@@ -139,7 +139,7 @@ body.visual_index { /* background: green; */ }
    ============================================ */
 
 body {
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Suisse', sans-serif;
   background: #fff;
   color: #000;
@@ -509,6 +509,12 @@ li span.active,
 #exhibit a:active { }
 
 #exhibit a:visted { }
+
+#exhibit p{
+  width: 90%;
+  font-size: 18px;
+  line-height: 1.15em;
+}
 /* ============================================
    CONTAINER & PADDING
    ============================================ */
