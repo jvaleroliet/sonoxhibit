@@ -811,3 +811,390 @@ textarea {
   background: #ccff00;
   color: #000;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   Based on indexhibit mobile architecture
+   All media queries at end for proper cascade override
+   ============================================ */
+
+/* Mobile elements - hidden by default */
+.index-toggle {
+  display: none;
+}
+
+#closing_layer {
+  display: none;
+}
+
+#mobile-header {
+  display: none;
+}
+
+/* ============================================
+   TABLET & MOBILE (min-width: 320px and max-width: 736px)
+   ============================================ */
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    padding: 10px 10px 0 10px;
+    padding-top: 60px;
+  }
+
+  /* Mobile header - always visible */
+  #mobile-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    z-index: 9998;
+    overflow: hidden;
+  }
+
+  #mobile-header p {
+    margin: 0;
+    padding: 0;
+    line-height: 34px;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Neureal', monospace;
+  }
+
+  #mobile-header a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  #mobile-header a:hover {
+    text-decoration: underline;
+  }
+
+  /* Off-canvas navigation */
+  #index {
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 9999;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+
+  #exhibit {
+    margin-left: 0;
+    height: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 30px;
+  }
+
+  /* Headings - full width on mobile */
+  h1, h2, h3 {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  /* Text content - full width on mobile */
+  #index p {
+    width: 100%;
+  }
+
+  #exhibit p,
+  code,
+  blockquote {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  /* Lists - full width on mobile */
+  #exhibit ul,
+  #exhibit ol {
+    width: 100%;
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  #exhibit ul li,
+  #exhibit ol li {
+    margin-bottom: 0.5em;
+  }
+
+  /* Images - responsive on mobile */
+  #exhibit img,
+  #exhibit object,
+  #exhibit picture {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #exhibit img.sinBorde {
+    border: none;
+  }
+
+  #exhibit .container #img-container {
+    margin-top: 0;
+  }
+
+  #exhibit .container #img-container div {
+    width: 100%;
+  }
+
+  /* Container padding */
+  #index .container,
+  #exhibit .container {
+    padding: 15px;
+  }
+
+  /* Typography adjustments */
+  #index ul.section span.section_title,
+  #index ul.section span.section_title a {
+    font-size: 16px;
+  }
+
+  #index .top {
+    font-size: 20px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  /* Blog layout - stack on mobile */
+  #entries_wrapper {
+    width: 100%;
+  }
+
+  #entries {
+    width: 100%;
+    float: none;
+  }
+
+  #entries_wrapper #sidebar {
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+  }
+
+  .blog-separator {
+    width: 100%;
+  }
+
+  /* Form elements */
+  input[type=text],
+  input[type=password],
+  textarea {
+    font-size: 14px;
+    padding: 0.4em;
+    margin: 0 0 0.5em 0;
+  }
+
+  .form-label label {
+    padding-right: 12px;
+    line-height: 1.8em;
+  }
+
+  .form-submit input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .form-submit input:hover {
+    background: #0c0;
+  }
+
+  /* Buttons */
+  .buttons button a {
+    font-size: 13px;
+    padding: 7px 10px;
+    margin: 0 5px 5px 0;
+  }
+
+  .buttons a:hover,
+  .buttons a:active {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  /* Small text */
+  small {
+    font-size: 10px;
+  }
+
+  /* Mobile hamburger toggle button */
+  .index-toggle {
+    display: block;
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 5000000;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+
+  /* Overlay when menu is open */
+  #closing_layer {
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Hamburger icon */
+  #nav-toggle {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    padding: 10px 0 16px 25px;
+  }
+
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 25px;
+    background: #000;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+
+  #nav-toggle span:before {
+    top: -7px;
+  }
+
+  #nav-toggle span:after {
+    bottom: -7px;
+  }
+
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+
+  #nav-toggle.active span:before,
+  #nav-toggle.active span:after {
+    top: 0;
+  }
+
+  #nav-toggle.active span:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #nav-toggle.active span:after {
+    -webkit-transform: translateY(-7px) rotate(-45deg);
+    -ms-transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
+    top: 7px;
+  }
+
+  /* Fix extra space under images */
+  .asset {
+    line-height: 0;
+  }
+
+  .asset a {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 0;
+  }
+
+  /* Responsive video containers */
+  .video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ============================================
+   SMALL PHONES (max-width: 480px)
+   ============================================ */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 13px;
+  }
+
+  #index ul.section span.section_title,
+  #index ul.section span.section_title a {
+    font-size: 14px;
+  }
+
+  #index .top {
+    font-size: 18px;
+  }
+
+  .page-title {
+    font-size: 15px;
+  }
+
+  #index .bot {
+    margin-top: 40px;
+  }
+
+  #index .container,
+  #exhibit .container {
+    padding: 12px 9px;
+  }
+
+  .buttons button a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .form-submit input {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}

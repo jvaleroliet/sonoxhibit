@@ -4,6 +4,7 @@
 <html lang='en-us'>
 <head>
 	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes'>
 		{% if page.title == 'index' %}
 			{% assign counter = 0 %}
 			{% for exhibit in site.categories.exhibit %}
@@ -25,6 +26,16 @@
 		<link rel='stylesheet' href='/stylesheets/screen.css' type='text/css' />
 	</head>
 	<body class='exhibits format-visual_index'>
+		<!-- Mobile header - always visible on mobile -->
+		<div id='mobile-header'>
+			<p><strong><a href='/' style='color: black;'>{{ site.title }}</a></strong></p>
+		</div>
+		<!-- Mobile overlay -->
+		<div id='closing_layer'></div>
+		<!-- Mobile navigation toggle -->
+		<div id='nav-toggle' class='index-toggle'>
+			<span></span>
+		</div>
 		<div id='index'>
 			<div class='container'>
 				<div class='top'>
@@ -81,5 +92,20 @@
 		</div>
 		{% endif %}
 	</body>
+	<!-- Mobile menu toggle script -->
+	<script>
+		const navToggle = document.getElementById('nav-toggle');
+		const index = document.getElementById('index');
+		const closingLayer = document.getElementById('closing_layer');
+		
+		function toggleMenu() {
+			navToggle.classList.toggle('active');
+			index.style.left = index.style.left === '0px' ? '-100vw' : '0px';
+			closingLayer.style.display = index.style.left === '0px' ? 'block' : 'none';
+		}
+		
+		navToggle.addEventListener('click', toggleMenu);
+		closingLayer.addEventListener('click', toggleMenu);
+	</script>
 	<script data-goatcounter="https://sonomayrit.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
