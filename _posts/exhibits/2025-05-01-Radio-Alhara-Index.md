@@ -67,3 +67,5 @@ Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}
 <div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2601.png"%}
 </div>
+
+Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2601){:target="_blank"}
