@@ -9,7 +9,7 @@ category: exhibit
 
 # Introduction
 
-<div style="max-width: 60%; margin: 0 auto;">
+<div style="max-width: 90%; margin: 0 auto;">
     {% picture jpt-webp  "projects/Fuente Antigua_0057.JPG" %}
 </div>
 
