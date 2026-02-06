@@ -23,42 +23,42 @@ The recordings were made in March, May and June of 2025. Produced with DIY micro
 Photos by Miguel Gallego.
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua1" %}
+    {% picture jpt-webp  "projects/losviajesdelagua1.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua2" %}
+    {% picture jpt-webp  "projects/losviajesdelagua2.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua3" %}
+    {% picture jpt-webp  "projects/losviajesdelagua3.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua4" %}
+    {% picture jpt-webp  "projects/losviajesdelagua4.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua5" %}
+    {% picture jpt-webp  "projects/losviajesdelagua5.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua6" %}
+    {% picture jpt-webp  "projects/losviajesdelagua6.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua7" %}
+    {% picture jpt-webp  "projects/losviajesdelagua7.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua8" %}
+    {% picture jpt-webp  "projects/losviajesdelagua8.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua9" %}
+    {% picture jpt-webp  "projects/losviajesdelagua9.JPG" %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/losviajesdelagua10" %}
+    {% picture jpt-webp  "projects/losviajesdelagua10.JPG" %}
 </div>
 
