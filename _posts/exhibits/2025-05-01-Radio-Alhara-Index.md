@@ -48,14 +48,14 @@ Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
 <br>
 
 ## urbs soni
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2511.png" %}
 </div>
 
 <br>
 
 ## mediaphone/wax
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2512.png" --link {{site.url}}/Radio-Alhara2512 %}
 </div>
 
