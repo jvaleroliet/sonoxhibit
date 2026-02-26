@@ -11,35 +11,35 @@ section: Radio
 Collection of episodes from *Aguaespejo* radio show on [Radio Alhara](https://radioalhara.net){:target="_blank"}.
 
 ## salterio noise
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2505.png" %}
 </div>
 
 <br>
 
 ## soledad sonora
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2507.png" %}
 </div>
 
 <br>
 
 ## viajes del agua
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2508.png" %}
 </div>
 
 <br>
 
 ## tape zin:es
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2509.png" %}
 </div>
 
 <br>
 
 ## interferences
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2510.png" --link {{site.url}}/Interferences %}
 </div>
 
@@ -64,8 +64,15 @@ Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}
 <br>
 
 ## mediaphone/shellac
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 50%; margin: 0 auto;">
     {% picture jpt-webp  "projects/radioalhara/2601.png"%}
 </div>
 
 Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2601){:target="_blank"}
+
+## mediaphone/tape
+<div style="max-width: 50%; margin: 0 auto;">
+    {% picture jpt-webp  "projects/radioalhara/2602.png"%}
+</div>
+
+Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2602){:target="_blank"}
