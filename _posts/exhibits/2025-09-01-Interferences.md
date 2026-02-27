@@ -8,7 +8,7 @@ category: exhibit
 ---
 
 <div style="max-width: 90%; margin: 0 auto;">
-    {% picture jpt-webp  "projects/estrecho1.JPG" 2:1 --link {{ page.external_link }} %}
+    {% picture  "projects/estrecho1.JPG" 2:1 --link {{ page.external_link }} %}
 </div>
 
 
@@ -25,7 +25,7 @@ I made field recordings of the Atlantic Ocean and the Mediterranean Sea collidin
 <br>
 
 <div style="max-width: 90%; margin: 0 auto;">
-{% picture jpt-webp  "projects/estrecho2.JPG" 2:1 --link {{ page.external_link }} %}
+{% picture  "projects/estrecho2.JPG" 2:1 --link {{ page.external_link }} %}
 </div>
 
 <br>
@@ -59,5 +59,5 @@ We cross by ferry from Tarifa. In this part, we hear the reverberations of the w
 We arrive in Tangier and walk through its old medina and markets, listening to an *Aita Jablia* song (a typical genre from the north of Morocco). In the medina, we enter the Jewish cemetery and its synagogues, and listen to a recording from the 1950s of the Haketia Jews (Sephardim living in the city who preserved the Spanish language) singing songs preserved since the time of Al-Andalus. From the synagogue itself, we hear the muslim call to prayer, and as we go out to look for the mosque, we meet a blind man who recites fables and taps his cane from side to side. We listened to another *Aita Jeblia* song and wandered through the cafés at dusk, when the city began to shine, and from Café Hafa, with a glass of tea in hand, we contemplated the lights of Tarifa, Caños, and Conil, just as the regulars at this café contemplate them day after day, without understanding how, despite being so close, we continue to live with our backs turned on each other.
 
 <div style="max-width: 90%; margin: 0 auto;">
-{% picture jpt-webp  "projects/estrecho3.JPG" 2:1 --link {{ page.external_link }} %}
+{% picture  "projects/estrecho3.JPG" 2:1 --link {{ page.external_link }} %}
 </div>

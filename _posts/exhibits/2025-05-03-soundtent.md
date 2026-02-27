@@ -15,13 +15,13 @@ Built a streambox (with DIY microphones + Raspberry PI Zero) and placed in [Elis
 
 
 <div style="max-width: 90%; margin: 0 auto;">
-{% picture jpt-webp  "projects/streambox1.jpg" --link {{ page.external_link }} %}
+{% picture  "projects/streambox1.jpg" --link {{ page.external_link }} %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-{% picture jpt-webp  "projects/streambox2.jpg" --link {{ page.external_link }} %}
+{% picture  "projects/streambox2.jpg" --link {{ page.external_link }} %}
 </div>
 
 <div style="max-width: 90%; margin: 0 auto;">
-{% picture jpt-webp  "projects/streambox3.jpg" --link {{ page.external_link }} %}
+{% picture  "projects/streambox3.jpg" --link {{ page.external_link }} %}
 </div>

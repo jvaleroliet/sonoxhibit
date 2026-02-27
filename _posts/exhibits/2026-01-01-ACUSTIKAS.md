@@ -8,7 +8,7 @@ category: exhibit
 ---
 
 <div style="max-width: 60%; margin: 0 auto;">
-{% picture jpt-webp  "projects/ACUSTIKAS1.JPG"%}
+{% picture  "projects/ACUSTIKAS1.JPG"%}
 </div>
 
 
