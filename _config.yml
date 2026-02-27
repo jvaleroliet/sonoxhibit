@@ -33,7 +33,7 @@ picture:
         default:
           width: [400, 800, 1200, 1600]
           format: webp
-          quality: 90
+          quality: 10
         fallback:
           width: [400, 800, 1200, 1600]
           format: jpg
