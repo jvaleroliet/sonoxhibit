@@ -1,6 +1,7 @@
 ---
-published: true
+published: false
 layout: default
+
 
 title: Ambient Boxes
 section: Works
