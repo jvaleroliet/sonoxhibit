@@ -40,7 +40,7 @@ Collection of episodes from *Aguaespejo* radio show on [Radio Alhara](https://ra
 
 ## interferences
 <div style="max-width: 30%; margin: 0 auto;">
-    {% picture  "projects/radioalhara/2510.png" --link {{site.url}}/Interferences %}
+    {% picture  "projects/radioalhara/2510.png" %}
 </div>
 
 Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
@@ -56,7 +56,7 @@ Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
 
 ## mediaphone/wax
 <div style="max-width: 30%; margin: 0 auto;">
-    {% picture  "projects/radioalhara/2512.png" --link {{site.url}}/Radio-Alhara2512 %}
+    {% picture  "projects/radioalhara/2512.png" %}
 </div>
 
 Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}

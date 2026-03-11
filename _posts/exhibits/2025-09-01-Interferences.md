@@ -18,9 +18,12 @@ category: exhibit
 
 <br>
 
-In September, I traveled to Cádiz and Tangier to record the interferences created by Spanish and Moroccan radio stations broadcasting on the same frequencies of the Strait of Gibraltar.
+In September, I traveled to Cádiz and Tangier to record the interferences created by Spanish and Moroccan radio stations broadcasting on the same frequencies of the Strait of Gibraltar, a phenomenon that amazed me since my childhood while we were visiting my family of South Spain.
 
-I made field recordings of the Atlantic Ocean and the Mediterranean Sea colliding, the strong winds that shape the landscapes on both shores, and the night sounds of both cities. Using self-made radio receivers, I captured overlapping AM and FM signals to create a soundscape of the 14 kilometers that separate the two continents.
+I spent two weeks walking, listening and exploring, and I made field recordings of the Atlantic Ocean and the Mediterranean Sea colliding, the strong winds that shape the landscapes on both shores, and the night sounds of both cities. Using found self-made radio receivers based on the artifacts designed by [shortwave collective](https://www.shortwavecollective.net/open-wave-receiver.html), I captured overlapping AM and FM signals to create a soundscape of the 14 kilometers that separate the two continents.
+
+It was presented live in Berlin in 2025, mixing the recordings and radio dubs with vinyl records from both cities, and it was broadcasted in an extended version on Radio Alhara the same month.
+
 
 <br>
 

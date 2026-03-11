@@ -12,13 +12,13 @@ category: exhibit
 
 
 
-*Los Viajes del Agua* is an ancient underground watering system built under Madrid in the 9th century, during its andalusian period, which was essential to the city's development. The technology, called *qanat* or *karez*, was invented in modern Iran 3,000 years ago and uses gravity to transport drinking water from aquifers to the surface without the need for pumping.
+*Los Viajes del Agua* is an ancient underground watering system built under Madrid in the 9th century, during its andalusian period, which was essential to the city's development. The technology, called *qanat* or *karez*, was invented in Iran 3,000 years ago and uses gravity to transport drinking water from aquifers to the surface without the need for pumping.
 
-Although their original function has been replaced by modern infrastructure, some parts of these canals still exist under Madrid and, incredibly, a continuous flow of water still persists in some of these surviving stretches.
+Although their original function has been replaced by modern infrastructure, some parts of these canals still exist under Madrid and, what specially fascinates me, a continuous flow of water still persists in some of these surviving stretches.
 
-The work features a sound collage with original field recordings from the watering sources in the mountains, the city’s underground canals, the traditional music and festivities of San Isidro (an amazigh shepherd linked to water miracles), and the last places where this water flows on the surface.
+The work features a sound collage with field recordings I did from the watering sources in the mountains, the city’s underground canals, the traditional music and festivities of San Isidro (an amazigh shepherd linked to water miracles), and the last places where this water flows on the surface.
 
-The recordings were made in March, May and June of 2025. Produced with DIY microphones (clippy, contact and hydrophones) built in February.
+The recordings were made in March, May and June of 2025. It was produced with DIY microphones (clippy, contact and hydrophones) specially designed to reach the underground canals from the surface, with small mic heads and long cables.
 
 Photos by Miguel Gallego.
 

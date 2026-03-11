@@ -7,11 +7,11 @@ section: Radio
 
 ---
 
-Aguaespejo, is a monthly show on [Radio Alhara](https://radioalhara.net){:target="_blank"} started in 2025.
+Aguaespejo is a monthly show on [Radio Alhara](https://radioalhara.net){:target="_blank"} started in 2025.
 
-At a time when dominant narratives threaten to fragment the rich identity of the Mediterranean, *AGUAESPEJO* emerges as an urgent cultural and sonic affirmation. This radio project seeks to amplify the region's unique soundscape, directly fostering new imaginaries that honor the profound interconnectedness of its shores.
+At a time when dominant narratives threaten to fragment the rich and common identity of the Mediterranean, *AGUAESPEJO* emerged naturally for me as an urgent cultural and sonic affirmation. In this radio project I hope to amplify the region's unique soundscape, directly fostering new imaginaries that honor the interconnectedness of its shores.
 
-Navigating through archival research, immersive field recordings, a deconstruction of tradition, and contemporary experimentation and sound art, this project aims to reactivate active and conscious listening across our region.
+Navigating through archival research, immersive field recordings, a deconstruction of tradition, and contemporary experimentation and sound art, each chapter aims to reactivate active and conscious listening across the region.
 
 Broadcasting every third Sunday of the month at 11:00 Palestinian time, 10:00 CET.
 
