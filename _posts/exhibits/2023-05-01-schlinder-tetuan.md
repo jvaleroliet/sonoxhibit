@@ -10,7 +10,7 @@ category: exhibit
 **Adrian Schindler film, 30 min, 2023.**<br><br>
 
 In collaboration with Fátima Bourhim Mesaoudi, Ikram Essaghir, Ibrahim Ibnou Goush,
-Huda Laamarti, La Guardia Mora and Sono Mayrit b2b Disco Atlas.
+Huda Laamarti, La Guardia Mora and Disco Atlas.
 
 <div style="max-width: 90%; margin: 0 auto;">
 {% picture  "projects/tetuan2.jpg" 2:1 --link {{ page.external_link }} %}

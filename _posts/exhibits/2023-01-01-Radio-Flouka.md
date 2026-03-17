@@ -11,7 +11,7 @@ category: exhibit
 
 **Radio Flouka residency, 2023 - 2024.** 
 
-Ibn Said al-Maghribi, born in Granada, compiled the poetry from Mashriq to Maghreb via Mayrit. The anthology presents a geographical map of the poets and musicians from Southwest Asia, North Africa and the South Iberian peninsula. 
+Ibn Said al-Maghribi, born in Granada, compiled the poetry from Mashriq to Maghreb via Mayrit. The anthology presented a geographical map of the poets and musicians from Southwest Asia, North Africa and the South Iberian peninsula. 
 
 Inspired by this journey, the show focused on the modern music styles from these regions, and the connections between them.
 
