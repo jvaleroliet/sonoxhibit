@@ -7,7 +7,7 @@ section: Works
 category: exhibit
 ---
 
-<iframe width="90%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2154250386&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sonomayrit" title="sonomayrit" target="_blank" style="color: #cccccc; text-decoration: none;">sonomayrit</a> · <a href="https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-viajes-del-agua-radio-alhara-17082025" title="sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025</a></div>
+<iframe width="60%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2154250386&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sonomayrit" title="sonomayrit" target="_blank" style="color: #cccccc; text-decoration: none;">sonomayrit</a> · <a href="https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-viajes-del-agua-radio-alhara-17082025" title="sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025</a></div>
 
 
 
@@ -22,43 +22,43 @@ The recordings were made in March, May and June of 2025. It was produced with DI
 
 Photos by Miguel Gallego.
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua1.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua2.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua3.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua4.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua5.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua6.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua7.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua8.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua9.JPG" %}
 </div>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/losviajesdelagua10.JPG" %}
 </div>
 

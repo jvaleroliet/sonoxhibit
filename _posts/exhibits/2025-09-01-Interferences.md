@@ -7,12 +7,12 @@ section: Works
 category: exhibit
 ---
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
     {% picture  "projects/estrecho1.JPG" 2:1 --link {{ page.external_link }} %}
 </div>
 
 
-<iframe width="90%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2192313203&color=%23d6d4d8&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/migasberlin" title="migas, a listening bar" target="_blank" style="color: #cccccc; text-decoration: none;">migas, a listening bar</a> · <a href="https://soundcloud.com/migasberlin/sono-mayrit-radio-interferences-listening-session-at-migas-011025" title="sono mayrit: radio interferences listening session at migas 01.10.25" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit: radio interferences listening session at migas 01.10.25</a></div>
+<iframe width="60%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2192313203&color=%23d6d4d8&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/migasberlin" title="migas, a listening bar" target="_blank" style="color: #cccccc; text-decoration: none;">migas, a listening bar</a> · <a href="https://soundcloud.com/migasberlin/sono-mayrit-radio-interferences-listening-session-at-migas-011025" title="sono mayrit: radio interferences listening session at migas 01.10.25" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit: radio interferences listening session at migas 01.10.25</a></div>
 
 
 
@@ -27,7 +27,7 @@ It was presented live in Berlin in 2025, mixing the recordings and radio dubs wi
 
 <br>
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
 {% picture  "projects/estrecho2.JPG" 2:1 --link {{ page.external_link }} %}
 </div>
 
@@ -61,6 +61,6 @@ We cross by ferry from Tarifa. In this part, we hear the reverberations of the w
 # [29:06 - end]
 We arrive in Tangier and walk through its old medina and markets, listening to an *Aita Jablia* song (a typical genre from the north of Morocco). In the medina, we enter the Jewish cemetery and its synagogues, and listen to a recording from the 1950s of the Haketia Jews (Sephardim living in the city who preserved the Spanish language) singing songs preserved since the time of Al-Andalus. From the synagogue itself, we hear the muslim call to prayer, and as we go out to look for the mosque, we meet a blind man who recites fables and taps his cane from side to side. We listened to another *Aita Jeblia* song and wandered through the cafés at dusk, when the city began to shine, and from Café Hafa, with a glass of tea in hand, we contemplated the lights of Tarifa, Caños, and Conil, just as the regulars at this café contemplate them day after day, without understanding how, despite being so close, we continue to live with our backs turned on each other.
 
-<div style="max-width: 90%; margin: 0 auto;">
+<div style="max-width: 60%; margin: 0 auto;">
 {% picture  "projects/estrecho3.JPG" 2:1 --link {{ page.external_link }} %}
 </div>
