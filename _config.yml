@@ -14,6 +14,11 @@ prose:
    layout: default
    category: section
    title: "El título de la sección"
+  "_posts/blog": |
+   layout: blog
+   category: blog
+   title: "Entry title (optional)"
+   published: true
 
 
 

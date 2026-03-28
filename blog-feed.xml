@@ -1,0 +1,31 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }} - Blog</title>
+  <link href="{{ site.url }}/blog-feed.xml" rel="self"/>
+  <link href="{{ site.url }}/blog/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}/blog</id>
+  <author>
+    <name>{{ site.author }}</name>
+  </author>
+  {% for post in site.categories.blog limit:20 %}
+  <entry>
+    <title type="html">{{ post.title | xml_escape }}</title>
+    <link href="{{ post.url | prepend: site.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ post.url | prepend: site.url }}</id>
+    <content type="html">
+      {{ post.content | xml_escape }}
+    </content>
+    <summary type="html">
+      {{ post.content | strip_html | truncatewords: 20 | xml_escape }}
+    </summary>
+    <author>
+      <name>{{ site.author }}</name>
+    </author>
+  </entry>
+  {% endfor %}
+</feed>
