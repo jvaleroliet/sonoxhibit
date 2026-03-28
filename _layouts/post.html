@@ -1,0 +1,96 @@
+---
+---
+<!doctype html>
+<html lang='en-us'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes'>
+	<title>{{page.title}} - {{ site.title }}</title>
+	<meta name='description' content="{{page.content | truncate: 50 }}" />
+	<meta name='author' content="{{ site.author }}" />
+	<meta name='generator' content="Jekyll" />
+	<link rel='stylesheet' href='/stylesheets/screen.css' type='text/css' />
+</head>
+<body class='blog-page format-blog'>
+	<!-- Mobile header -->
+	<div id='mobile-header'>
+		<p><strong><a href='/' style='color: black;'>{{ site.title }}</a></strong></p>
+	</div>
+	<!-- Navigation sidebar -->
+	<div id='closing_layer'></div>
+	<div id='nav-toggle' class='index-toggle'>
+		<span></span>
+	</div>
+	<div id='index'>
+		<div class='container'>
+			<div class='top'>
+				<p><strong><a href='/' style='color: black;'>{{ site.title }}</a></strong></p>
+			</div>
+			{% for section in site.categories.section %}
+				<ul class='section' id='section_{{ section.id }}'>
+					<li><span id='section_title_{{ section.id }}' class='section_title'>&#42{{ section.title }}</span>
+					{% for exhibit in site.categories.exhibit %}
+						<ul>
+						{% if exhibit.section == section.title and exhibit.hidden != true  %}
+							<li id='exhibit_{{exhibit.id}}' class='exhibit_title'><a href='{{exhibit.url}}'>{{exhibit.title}}</a></li>
+						{% endif %}
+						</ul>
+					{%  endfor %}
+					</li>
+				</ul>
+			{%  endfor %}
+			<ul class='section' id='section_blog'>
+				<li><span class='section_title'>&#42 Blog</span>
+					<ul>
+						<li class='exhibit_title'><a href='/blog/'>Feed</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class='bot'>
+				<ul>	
+					<li><a href="https://aporee.org/maps/work/user.php?u=3877">aporee</a></li>
+					<li><a href="https://soundcloud.com/sonomayrit">soundcloud</a></li>
+					<li><a href="https://instagram.com/sonomayrit">instagram</a></li>
+					<li><a href="mailto:info@sonomayrit.com">email</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Main blog post content -->
+	<div id='blog-feed'>
+		<div class='container'>
+			<div class='top'>
+				<p><div class="page-title">{{ page.title }}</div></p>
+				<p class='entry-date'>{{ page.date | date: "%Y-%m-%d" }}</p>
+			</div>
+			<div id='blog-entries'>
+				<article class='blog-entry' data-date='{{ page.date | date: "%Y-%m-%d" }}'>
+					<h2 class='entry-date'>{{ page.date | date: "%Y-%m-%d" }}</h2>
+					{% if page.title %}
+						<h3 class='entry-title'>{{ page.title }}</h3>
+					{% endif %}
+					<div class='entry-content'>
+						{{ content }}
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Navigation toggle for mobile
+		const navToggle = document.querySelector('.index-toggle');
+		const indexDiv = document.getElementById('index');
+		const closingLayer = document.getElementById('closing_layer');
+		if (navToggle) {
+			navToggle.addEventListener('click', function() {
+				indexDiv.classList.toggle('mobile-open');
+				closingLayer.classList.toggle('active');
+			});
+			closingLayer.addEventListener('click', function() {
+				indexDiv.classList.remove('mobile-open');
+				closingLayer.classList.remove('active');
+			});
+		}
+	</script>
+</body>
+</html>

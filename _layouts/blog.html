@@ -69,17 +69,20 @@
 			<!-- Blog entries -->
 			<div id='blog-entries'>
 				{% assign posts = site.categories.blog | sort: 'date' | reverse %}
-				{% for post in posts %}
-					<article class='blog-entry' data-date='{{ post.date | date: "%Y-%m-%d" }}'>
-						<h2 class='entry-date'>{{ post.date | date: "%Y-%m-%d" }}</h2>
-						{% if post.title %}
-							<h3 class='entry-title'>{{ post.title }}</h3>
-						{% endif %}
-						<div class='entry-content'>
-							{{ post.content }}
-						</div>
-					</article>
-				{% endfor %}
+				   {% for post in posts %}
+					   <article class='blog-entry' data-date='{{ post.date | date: "%Y-%m-%d" }}'>
+						   <h2 class='entry-date'>{{ post.date | date: "%Y-%m-%d" }}</h2>
+						   {% if post.title %}
+							   <h3 class='entry-title'>{{ post.title }}</h3>
+						   {% endif %}
+						   <div class='entry-content'>
+							   {{ post.excerpt }}
+							   {% if post.excerpt != post.content %}
+								   <a class='read-more' href='{{ post.url }}'>Read more</a>
+							   {% endif %}
+						   </div>
+					   </article>
+				   {% endfor %}
 			</div>
 		</div>
 	</div>

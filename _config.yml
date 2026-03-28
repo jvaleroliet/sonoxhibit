@@ -1,4 +1,5 @@
 permalink: none
+excerpt_separator: "<!--more-->"
 exclude: [ "sass", "CNAME", "config.rb", "LICENSE", "README.md", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
 
 
@@ -27,11 +28,11 @@ author: sonomayrit
 
 
 picture:
-  source: "src/Images"
+  source: "src/Images/unprocessed"
   output: "src/Images/generated"
   suppress_warnings: true
   disabled: false
-  
+    
   presets:
     jpt-webp:
       media_queries:
