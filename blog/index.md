@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog Feed
-published: true
+published: false
 permalink: /blog/
 ---
 
