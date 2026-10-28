@@ -1,6 +1,6 @@
 permalink: none
 excerpt_separator: "<!--more-->"
-exclude: [ "sass", "CNAME", "config.rb", "LICENSE", "README.md", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
+exclude: [ "src/Images/unprocessed", "sass", "CNAME", "config.rb", "LICENSE", "README.md", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
 
 
 prose:

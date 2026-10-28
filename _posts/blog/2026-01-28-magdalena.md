@@ -34,7 +34,7 @@ On this parts of the non-city there's no one and the atmosphere is strange. I fe
 I went up a first small mountain (not the one you can see from home) but with a good view, and realized some slum houses nearby, where I could see they were preparing the meal for this special day. I saw also some signs on walls indicating *Las Barranquillas*, and after doing a couple of recordings I went back to investigate this name that sounded familiar. 
 
 <div style="max-width: 80%; margin: 0 auto;">
-![Walking](/src/Images/unprocessed/blog/cerrovid2.gif)
+![Walking](/src/Images/static/blog/cerrovid2.gif)
 </div>
 
 <iframe src="https://archive.org/embed/aporee_70662_82401" width="80%" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
