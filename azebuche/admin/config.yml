@@ -1,0 +1,132 @@
+# AZEBUCHE editing panel (Sveltia CMS 0.239.1). Docs: https://sveltiacms.app/en/docs
+# Sign in with a GitHub token: see azebuche/README.md.
+
+backend:
+  name: github
+  repo: jvaleroliet/sonoxhibit
+  branch: gh-pages
+
+site_url: https://sonomayrit.com/azebuche/
+display_url: https://sonomayrit.com/azebuche/
+
+# Photos go here as uploaded; the site build turns them into 1-bit PNGs.
+media_folder: /src/azebuche/raw
+public_folder: /src/azebuche/raw
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+
+collections:
+  - name: recordings
+    label: Recordings
+    label_singular: Recording
+    description: One entry per recording. After saving, the site updates in a few minutes.
+    folder: _azebuche
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: "azb-{{number}}"
+    summary: "{{number}} · {{title}} {{draft | ternary('(draft)', '')}}"
+    fields:
+      - name: number
+        label: Number
+        hint: "Three digits: the highest number in the list plus one (009, 010…). It also names the file, so it can't be changed later."
+        pattern: ['^\d{3}$', "Use three digits, for example 009"]
+      - name: title
+        label: Title
+      - name: place
+        label: Place
+        hint: Town or village, for example Nablus
+      - name: region
+        label: Region
+        widget: relation
+        collection: settings
+        file: labels
+        value_field: "{{regions.*.id}}"
+        display_fields: ["{{regions.*.label}}"]
+        search_fields: ["{{regions.*.label}}"]
+      - name: tags
+        label: Tags
+        widget: relation
+        collection: settings
+        file: labels
+        value_field: "{{tags.*.id}}"
+        display_fields: ["{{tags.*.label}}"]
+        search_fields: ["{{tags.*.label}}"]
+        multiple: true
+        min: 1
+      - name: recorded
+        label: Date recorded
+        hint: "Year and month, for example 2024-10, or only the year: 2024"
+        pattern: ['^\d{4}(-\d{2})?$', "Write it as 2024-10 or 2024"]
+      - name: language
+        label: Language
+        required: false
+      - name: recordist
+        label: Recorded by
+        default: sonomayrit
+      - name: audio
+        label: Audio file address
+        hint: "The direct link to the .opus file on archive.org: open the item, right-click the OPUS file under DOWNLOAD OPTIONS, and copy the link."
+        pattern: ['^(https?://|/)', "Paste the full address, starting with https://"]
+      - name: duration
+        label: Length
+        hint: "Minutes and seconds, for example 11:15"
+        pattern: ['^\d+:\d{2}(:\d{2})?$', "Write it as 11:15"]
+      - name: size
+        label: File size
+        hint: "As shown on archive.org, for example 4.0 MB"
+      - name: image
+        label: Photo
+        widget: image
+        required: false
+        hint: Any normal photo. It is turned into black-and-white dots automatically.
+      - name: image_alt
+        label: Photo description
+        required: false
+        hint: One sentence describing the photo, for people who can't see it.
+      - name: description
+        label: Short description
+        widget: text
+        hint: One or two sentences, shown in the index.
+      - name: license
+        label: License
+        default: CC BY-NC-SA 4.0
+      - name: draft
+        label: Draft (hidden from the site)
+        widget: boolean
+        default: false
+        required: false
+      - name: body
+        label: Lyrics, translation and notes
+        widget: markdown
+        required: false
+        default: "## Lyrics\n\n\n## Translation\n\n\n## Notes\n\nWho sang, context, permissions.\n"
+
+  - name: settings
+    label: Archive settings
+    files:
+      - name: labels
+        label: Texts, tags and regions
+        file: _data/azebuche.yml
+        fields:
+          - { name: intro, label: Introduction, widget: text }
+          - { name: about, label: About, widget: text }
+          - { name: contribute, label: Contribute, widget: text }
+          - { name: license, label: License note, widget: text }
+          - { name: tagline, label: Tagline (large text at the bottom) }
+          - { name: contact, label: Contact email }
+          - name: tags
+            label: Tags
+            widget: list
+            hint: "To add a tag: add an item. The id is short, lowercase, without spaces (for example harvest-meal)."
+            fields:
+              - { name: id, label: Id, pattern: ['^(?!all$)[a-z0-9-]+$', "Lowercase letters, numbers and dashes only (not 'all')"] }
+              - { name: label, label: Label }
+          - name: regions
+            label: Regions
+            widget: list
+            fields:
+              - { name: id, label: Id, pattern: ['^(?!all$)[a-z0-9-]+$', "Lowercase letters, numbers and dashes only (not 'all')"] }
+              - { name: label, label: Label }
