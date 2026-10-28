@@ -1,0 +1,86 @@
+---
+---
+{%- assign d = site.data.azebuche -%}
+{%- assign recs = site.azebuche | sort: "slug" | reverse -%}
+{%- capture filter_ids -%}{% for t in d.tags %}{{ t.id }} {% endfor %}{% for g in d.regions %}{{ g.id }} {% endfor %}{%- endcapture -%}
+{%- assign filter_ids = filter_ids | split: " " -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azebuche</title>
+<meta name="description" content="{{ d.intro | strip | escape }}">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/azebuche/azebuche.css">
+<style>
+/* filters, generated from _data/azebuche.yml */
+{% for id in filter_ids %}body:has(#f-{{ id }}:checked) .index>li:not([data-t~="{{ id }}"]){% unless forloop.last %},{% endunless %}
+{% endfor %}{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+{% include azebuche/bar.html %}
+<main>
+<h1>Azebuche</h1>
+<p class="intro">{{ d.intro }}</p>
+
+<div class="filters" role="group" aria-label="Filter recordings">
+  <span class="count">Recordings ({{ recs.size }})</span>
+  <input type="radio" name="f" id="f-all" checked><label for="f-all">All</label>
+  {%- for t in d.tags %}
+    {%- assign c = 0 %}
+    {%- for r in recs %}{% if r.tags contains t.id %}{% assign c = c | plus: 1 %}{% endif %}{% endfor %}
+    {%- if c > 0 %}
+  <input type="radio" name="f" id="f-{{ t.id }}"><label for="f-{{ t.id }}">{{ t.label }}<sup>{{ c }}</sup></label>
+    {%- endif %}
+  {%- endfor %}
+  {%- for g in d.regions %}
+    {%- assign c = 0 %}
+    {%- for r in recs %}{% if r.region == g.id %}{% assign c = c | plus: 1 %}{% endif %}{% endfor %}
+    {%- if c > 0 %}
+  <input type="radio" name="f" id="f-{{ g.id }}"><label for="f-{{ g.id }}">{{ g.label }}<sup>{{ c }}</sup></label>
+    {%- endif %}
+  {%- endfor %}
+</div>
+
+<div class="head" aria-hidden="true"><span>No.</span><span>Title</span><span>Place</span><span>Tags</span><span>Date</span><span class="r">Length</span></div>
+<ol class="index">
+{%- for r in recs %}
+{%- include azebuche/recording-vars.html r=r %}
+<li id="azb-{{ azb_code }}" data-t="{{ r.region }} {{ r.tags | join: ' ' }}">
+  <details>
+    <summary class="row">
+      <span class="n">({{ azb_n }})</span>
+      <span class="t">{{ r.title }}</span>
+      <span class="p">{{ r.place }}</span>
+      <span class="tags">{{ azb_tags }}</span>
+      <span class="d">{{ azb_date }}</span>
+      <span class="dur">{{ r.duration }}</span>
+    </summary>
+    <div class="entry">
+      {%- if azb_img %}
+      <img src="{{ azb_img }}" width="480" height="360" alt="" loading="lazy">
+      {%- endif %}
+      <div class="txt">
+        <p>{{ r.description }}</p>
+        <p class="meta">AZB-{{ azb_code }}. {{ azb_region }}. Recorded by {{ r.recordist }}.{% if r.audio %} {{ azb_format }}.{% endif %} <a href="{{ r.url }}">Full entry, lyrics and notes</a></p>
+        {%- if r.audio %}
+        <audio controls preload="none" src="{{ r.audio }}"></audio>
+        <a class="dl" href="{{ r.audio }}" download>Download ({{ r.size }})</a>
+        {%- endif %}
+      </div>
+    </div>
+  </details>
+</li>
+{%- endfor %}
+</ol>
+{%- if recs.size == 0 %}
+<p class="none empty">No recordings yet.</p>
+{%- endif %}
+</main>
+{% include azebuche/footer.html weight=true %}
+</div>
+</body>
+</html>

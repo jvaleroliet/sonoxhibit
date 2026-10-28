@@ -1,0 +1,34 @@
+{%- comment -%}
+  Values derived from one recording (include.r), shared by both layouts:
+  azb_n (8), azb_code (008), azb_img (dithered PNG path), azb_tags (Song, Testimony),
+  azb_region (East Med), azb_date (Oct 2024), azb_format (Opus, 48 kbps).
+{%- endcomment -%}
+{%- assign r = include.r -%}
+{%- assign azb_n = r.number | plus: 0 -%}
+{%- assign azb_code = r.number | prepend: "00" | slice: -3, 3 -%}
+
+{%- assign azb_img = nil -%}
+{%- if r.image -%}
+  {%- assign stem = r.image | split: "/" | last | split: "." | pop | join: "." -%}
+  {%- assign azb_img = stem | uri_escape | prepend: "/src/azebuche/dithered/" | append: ".png" -%}
+{%- endif -%}
+
+{%- capture azb_tags -%}
+  {%- for t in r.tags -%}
+    {%- assign tag = site.data.azebuche.tags | where: "id", t | first -%}
+    {{- tag.label | default: t -}}{%- unless forloop.last -%}, {% endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- assign region = site.data.azebuche.regions | where: "id", r.region | first -%}
+{%- assign azb_region = region.label | default: r.region -%}
+
+{%- assign rec = r.recorded | append: "" -%}
+{%- case rec.size -%}
+  {%- when 7 -%}{%- assign azb_date = rec | append: "-01" | date: "%b %Y" -%}
+  {%- when 10 -%}{%- assign azb_date = rec | date: "%-d %b %Y" -%}
+  {%- else -%}{%- assign azb_date = rec -%}
+{%- endcase -%}
+
+{%- assign ext = r.audio | split: "." | last | downcase -%}
+{%- if ext == "opus" -%}{%- assign azb_format = "Opus, 48 kbps" -%}{%- else -%}{%- assign azb_format = ext | upcase -%}{%- endif -%}

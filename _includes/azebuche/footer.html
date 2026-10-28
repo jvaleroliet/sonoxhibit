@@ -1,0 +1,24 @@
+{%- assign d = site.data.azebuche -%}
+<footer>
+  <div id="about">
+    <h2>About</h2>
+    <p>{{ d.about }}</p>
+  </div>
+  <div id="contribute">
+    <h2>Contribute</h2>
+    <p>{{ d.contribute }}</p>
+    <p><a href="mailto:{{ d.contact }}">{{ d.contact }}</a></p>
+  </div>
+  <div>
+    <h2>This page</h2>
+    {%- if include.weight %}
+    <p><!--azb-weight--></p>
+    {%- endif %}
+    <p>No scripts, no cookies, no tracking. Audio loads only when you press play.</p>
+  </div>
+  <div>
+    <h2>License</h2>
+    <p>{{ d.license }}</p>
+  </div>
+  <p class="tagline">{{ d.tagline }}</p>
+</footer>

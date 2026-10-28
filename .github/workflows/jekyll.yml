@@ -35,6 +35,8 @@ jobs:
         run: sudo apt-get update
       - name: Install JPT's dependencies
         run: sudo apt-get install libvips-tools
+      - name: Install Pillow (AZEBUCHE image dithering)
+        run: sudo apt-get install python3-pil
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby

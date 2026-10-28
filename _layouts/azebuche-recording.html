@@ -1,0 +1,75 @@
+---
+---
+{%- assign recs = site.azebuche | sort: "slug" | reverse -%}
+{%- for r in recs -%}
+  {%- if r.url == page.url -%}
+    {%- assign newer = forloop.index0 | minus: 1 -%}
+    {%- assign older = forloop.index0 | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if newer >= 0 %}{% assign next = recs[newer] %}{% endif -%}
+{%- assign prev = recs[older] -%}
+{%- include azebuche/recording-vars.html r=page -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>({{ azb_n }}) {{ page.title }} · Azebuche</title>
+<meta name="description" content="{{ page.description | strip | escape }}">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/azebuche/azebuche.css">
+</head>
+<body>
+<div class="wrap">
+{% include azebuche/bar.html %}
+<main>
+<h1 class="title"><span class="n">({{ azb_n }})</span> {{ page.title }}</h1>
+
+<div class="rec">
+  <table class="facts">
+    <tr><th scope="row">No.</th><td>AZB-{{ azb_code }}</td></tr>
+    <tr><th scope="row">Place</th><td>{{ page.place }}</td></tr>
+    <tr><th scope="row">Region</th><td>{{ azb_region }}</td></tr>
+    <tr><th scope="row">Recorded</th><td>{{ azb_date }}</td></tr>
+    {%- if page.language %}
+    <tr><th scope="row">Language</th><td>{{ page.language }}</td></tr>
+    {%- endif %}
+    <tr><th scope="row">Recordist</th><td>{{ page.recordist }}</td></tr>
+    <tr><th scope="row">Tags</th><td>{{ azb_tags }}</td></tr>
+    <tr><th scope="row">Length</th><td>{{ page.duration }}</td></tr>
+    <tr><th scope="row">License</th><td>{{ page.license }}</td></tr>
+  </table>
+
+  <div class="media">
+    {%- if azb_img %}
+    <img src="{{ azb_img }}" width="800" height="600" alt="{{ page.image_alt | escape }}">
+    {%- endif %}
+    <p>{{ page.description }}</p>
+    {%- if page.audio %}
+    <audio controls preload="none" src="{{ page.audio }}"></audio>
+    <a class="dl" href="{{ page.audio }}" download>Download ({{ page.size }}, {{ azb_format }})</a>
+    {%- endif %}
+  </div>
+
+  <div class="body">
+{{ content }}
+  </div>
+</div>
+
+<nav class="pager" aria-label="More recordings">
+  {%- if prev %}
+  {%- assign pn = prev.number | plus: 0 %}
+  <a href="{{ prev.url }}" rel="prev">Previous: ({{ pn }}) {{ prev.title }}</a>
+  {%- endif %}
+  <a href="/azebuche/#azb-{{ azb_code }}">Back to the index</a>
+  {%- if next %}
+  {%- assign nn = next.number | plus: 0 %}
+  <a href="{{ next.url }}" rel="next">Next: ({{ nn }}) {{ next.title }}</a>
+  {%- endif %}
+</nav>
+</main>
+{% include azebuche/footer.html %}
+</div>
+</body>
+</html>
