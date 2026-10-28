@@ -163,6 +163,11 @@ looks broken.
   dates. The `AZB-009` code is derived from `number`.
 - To make an .opus file and get its length and size:
   `sh tools/azebuche/encode-audio.sh recording.wav` (needs ffmpeg).
+- Fonts are sonomayrit's Suisse Intl (Light, Medium) and Neureal Mono,
+  cut down to Latin characters as small WOFF2 files in `azebuche/fonts/`
+  (`sh tools/azebuche/subset-fonts.sh` remakes them from `src/Fonts/`).
+  Neureal is a trial version with letters only, so it is used just for the
+  wordmark and the "sonomayrit" brand.
 - Public pages have no JavaScript. Only `azebuche/admin/` loads Sveltia CMS,
   pinned to a version with an integrity hash. To update it, see the comment
   in `azebuche/admin/index.html`.

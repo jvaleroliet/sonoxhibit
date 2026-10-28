@@ -1,4 +1,11 @@
 /* AZEBUCHE. The filter rules are generated in _layouts/azebuche.html from _data/azebuche.yml. */
+
+/* sonomayrit's typefaces, subset to Latin (see tools/azebuche/subset-fonts.sh).
+   Neureal (trial) has letters only: use it for all-letter text. */
+@font-face{font-family:"Suisse";src:url(fonts/SuisseIntl-Light.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse";src:url(fonts/SuisseIntl-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Neureal";src:url(fonts/NeurealTrial-Mono.woff2) format("woff2");font-weight:400;font-display:swap}
+
 :root{
   --bg:#fff;--ink:#111;--soft:#767676;--rule:#111;--hair:#d6d6d6;--hover:#f3f3ef;--plate:#e9e9e4;
   box-sizing:border-box;color-scheme:light;
@@ -11,8 +18,10 @@
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font:15px/1.4 "Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  font:15px/1.4 "Suisse","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-synthesis:none;
+  font-variant-numeric:tabular-nums} /* Suisse's tabular 1 has a flag, so AZB-001 doesn't read as AZB-00I */
 a{color:inherit}
+strong{font-weight:500}
 .wrap{padding:0 clamp(1rem,3vw,2.5rem)}
 :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
@@ -21,8 +30,10 @@ a{color:inherit}
 .bar nav{display:flex;gap:1.5rem}
 .bar a{text-decoration:none}
 .bar a:hover{text-decoration:underline}
+.bar>a strong{font-family:"Neureal","Suisse",monospace;font-weight:400;font-size:15px}
 h1{margin:clamp(2rem,8vw,6rem) 0 1rem;font-size:clamp(3.5rem,17vw,16rem);line-height:.86;
   font-weight:500;letter-spacing:-.045em;text-transform:uppercase}
+h1:not(.title){font-family:"Neureal","Suisse",monospace;font-weight:400}
 .intro{max-width:34rem;margin:0 0 clamp(2.5rem,6vw,4.5rem);font-size:17px;line-height:1.35}
 
 /* filters: pure CSS, no script */
