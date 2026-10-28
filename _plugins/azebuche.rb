@@ -3,7 +3,9 @@
 # 1. Before Jekyll reads the site, dither new or changed photos from
 #    src/azebuche/raw into src/azebuche/dithered (tools/azebuche/dither.py).
 # 2. Leave recordings marked `draft: true` out of the site.
-# 3. Write the index page weight into its footer.
+# 3. Keep line breaks in lyrics: a new line in the text box is a new line
+#    on the page (Markdown would otherwise join them).
+# 4. Write the index page weight into its footer.
 
 require "open3"
 require "uri"
@@ -31,6 +33,18 @@ module Azebuche
     raise "Azebuche: Python 3 with Pillow is needed to dither images (pip install Pillow)"
   end
 
+  BLOCK = /\A\s*([#>|]|[-*+]\s|\d+[.)]\s)/
+
+  def self.keep_line_breaks(text)
+    lines = text.split("\n", -1)
+    lines.each_with_index.map do |line, i|
+      nxt = lines[i + 1]
+      next line if nxt.nil? || line.strip.empty? || nxt.strip.empty?
+      next line if line =~ BLOCK || nxt =~ BLOCK
+      line.sub(/\\?\s*\z/, "  ")
+    end.join("\n")
+  end
+
   def self.kb(bytes)
     "#{(bytes / 1024.0).round} KB"
   end
@@ -42,6 +56,10 @@ end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   site.collections["azebuche"]&.docs&.reject! { |doc| doc.data["draft"] }
+end
+
+Jekyll::Hooks.register :azebuche, :pre_render do |doc|
+  doc.content = Azebuche.keep_line_breaks(doc.content)
 end
 
 Jekyll::Hooks.register :pages, :post_render do |page|
