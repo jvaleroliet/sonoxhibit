@@ -2,3 +2,5 @@ _site/*
 _sass-cache
 .DS_Store
 .sass-cache
+# AZEBUCHE: dithered images are made by the build from src/azebuche/raw
+src/azebuche/dithered/

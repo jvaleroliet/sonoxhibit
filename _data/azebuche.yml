@@ -1,0 +1,46 @@
+# AZEBUCHE: archive texts and labels.
+# Edited from the panel at /azebuche/admin/ ("Archive settings").
+# A new tag or region only needs one item here: the filters, counts
+# and the panel's tag list update on the next build.
+
+intro: >-
+  A sonic archive of olive harvest songs, voices and field recordings
+  from across the Mediterranean.
+
+about: >-
+  The azebuche is the wild olive tree. Spanish acebuche, from Andalusi
+  Arabic az-zabbūj, still alive as zebbouj in Maghrebi Arabic and as
+  azebbuj in Kabyle and other Amazigh languages. A project by sonomayrit.
+
+contribute: >-
+  Do you have a harvest song, a recording or a memory of the harvest?
+  Write to info@sonomayrit.com.
+
+license: >-
+  Recordings CC BY-NC-SA 4.0 unless noted on each entry.
+
+tagline: Under the olive trees
+
+contact: info@sonomayrit.com
+
+# id: short, lowercase, no spaces (used in addresses and filters)
+# label: what visitors read
+tags:
+  - id: song
+    label: Song
+  - id: soundscape
+    label: Soundscape
+  - id: testimony
+    label: Testimony
+  - id: mill
+    label: Mill
+  - id: food
+    label: Food
+
+regions:
+  - id: west
+    label: West Med
+  - id: centre
+    label: Central Med
+  - id: east
+    label: East Med

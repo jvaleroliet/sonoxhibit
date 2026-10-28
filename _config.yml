@@ -1,7 +1,19 @@
 permalink: none
 excerpt_separator: "<!--more-->"
-exclude: [ "src/Images/unprocessed", "sass", "CNAME", "config.rb", "LICENSE", "README.md", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
+exclude: [ "src/Images/unprocessed", "src/azebuche/raw", "tools", "azebuche/README.md", "sass", "CNAME", "config.rb", "LICENSE", "README.md", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
 
+# AZEBUCHE archive: one Markdown file per recording in _azebuche/
+collections:
+  azebuche:
+    output: true
+    permalink: /azebuche/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: azebuche
+    values:
+      layout: azebuche-recording
 
 prose:
  rooturl: "_posts/"
