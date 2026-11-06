@@ -26,7 +26,7 @@ collections:
     create: true
     extension: md
     format: yaml-frontmatter
-    slug: "azb-{{number}}"
+    slug: "ohs-{{number}}"
     summary: "{{number}} · {{title}} {{draft | ternary('(draft)', '')}}"
     fields:
       - name: number
@@ -35,9 +35,18 @@ collections:
         pattern: ['^\d{3}$', "Use three digits, for example 009"]
       - name: title
         label: Title
+        hint: "The song's name in Latin letters (for example Ya zaytouna), or a short English description if it has none"
+      - name: title_original
+        label: Title in the original script
+        required: false
+        hint: "For example يا زيتونا. Leave empty for songs in Latin script."
       - name: place
         label: Place
-        hint: Town or village, for example Nablus
+        required: false
+        hint: Village, town or area, for example Nablus or Kabylie
+      - name: country
+        label: Country
+        hint: "For example Palestine. Each country becomes a filter on the index."
       - name: region
         label: Region
         widget: relation
@@ -66,6 +75,18 @@ collections:
       - name: recordist
         label: Recorded by
         default: sonomayrit
+        required: false
+      - name: source
+        label: Source link
+        required: false
+        hint: "If the song comes from a video or another archive: its address. Shown instead of 'Recorded by'."
+      - name: source_name
+        label: Source name
+        required: false
+        hint: For example the YouTube channel
+      - name: source_title
+        label: Original video title
+        required: false
       - name: audio
         label: Audio file address
         hint: "The direct link to the .opus file on archive.org: open the item, right-click the OPUS file under DOWNLOAD OPTIONS, and copy the link."

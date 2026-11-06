@@ -5,7 +5,7 @@
 # 2. Leave recordings marked `draft: true` out of the site.
 # 3. Keep line breaks in lyrics: a new line in the text box is a new line
 #    on the page (Markdown would otherwise join them).
-# 4. Write the index page weight (HTML, CSS, fonts; photos apart) into its footer.
+# 4. Write the index page weight (HTML, CSS, fonts, drawing; photos apart) into its footer.
 
 require "open3"
 require "uri"
@@ -68,13 +68,14 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   source = page.site.source
   css = File.size(File.join(source, "azebuche/azebuche.css"))
   fonts = Dir[File.join(source, "azebuche/fonts/*.woff2")].sum { |f| File.size(f) }
+  drawing = %w[olive-branch.png favicon.png].sum { |f| File.size(File.join(source, "azebuche", f)) }
   images = page.output.scan(%r{src="/(src/azebuche/dithered/[^"]+\.png)"}).flatten.uniq
   img = images.sum { |p| File.size?(File.join(source, URI.decode_uri_component(p))) || 0 }
   html = page.output.bytesize
 
   page.output = page.output.sub(
     "<!--azb-weight-->",
-    "#{Azebuche.kb(html + css + fonts)} of HTML, CSS and fonts. " \
+    "#{Azebuche.kb(html + css + fonts + drawing)} of HTML, CSS, fonts and the olive drawing. " \
     "Photos load only when an entry is opened (#{Azebuche.kb(img)} in total)."
   )
 end

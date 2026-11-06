@@ -7,19 +7,20 @@
 @font-face{font-family:"Neureal";src:url(fonts/NeurealTrial-Mono.woff2) format("woff2");font-weight:400;font-display:swap}
 
 :root{
-  --bg:#fff;--ink:#111;--soft:#767676;--rule:#111;--hair:#d6d6d6;--hover:#f3f3ef;--plate:#e9e9e4;
+  /* olive paper; dark mode is olive night */
+  --bg:#e3e1c9;--ink:#2a2f14;--soft:#66684b;--rule:#2a2f14;--hair:#cbc9ad;--hover:#d9d7bc;--plate:#d2d0b3;
   box-sizing:border-box;color-scheme:light;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0f0f0f;--ink:#ececec;--soft:#8c8c8c;--rule:#ececec;--hair:#2c2c2c;--hover:#1a1a1a;color-scheme:dark}
+  :root:not([data-theme="light"]){--bg:#3a3f22;--ink:#eee8d0;--soft:#b0ac8b;--rule:#eee8d0;--hair:#555a39;--hover:#43482a;--plate:#e4dfc4;color-scheme:dark}
 }
-:root[data-theme="dark"]{--bg:#0f0f0f;--ink:#ececec;--soft:#8c8c8c;--rule:#ececec;--hair:#2c2c2c;--hover:#1a1a1a;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#3a3f22;--ink:#eee8d0;--soft:#b0ac8b;--rule:#eee8d0;--hair:#555a39;--hover:#43482a;--plate:#e4dfc4;color-scheme:dark}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);
   font:15px/1.4 "Suisse","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-synthesis:none;
-  font-variant-numeric:tabular-nums} /* Suisse's tabular 1 has a flag, so AZB-001 doesn't read as AZB-00I */
+  font-variant-numeric:tabular-nums} /* Suisse's tabular 1 has a flag, so OHS-001 doesn't read as OHS-00I */
 a{color:inherit}
 strong{font-weight:500}
 .wrap{padding:0 clamp(1rem,3vw,2.5rem)}
@@ -31,9 +32,13 @@ strong{font-weight:500}
 .bar a{text-decoration:none}
 .bar a:hover{text-decoration:underline}
 .bar>a strong{font-family:"Neureal","Suisse",monospace;font-weight:400;font-size:15px}
-h1{margin:clamp(2rem,8vw,6rem) 0 1rem;font-size:clamp(3.5rem,17vw,16rem);line-height:.86;
+h1{margin:clamp(2rem,6vw,4.5rem) 0 1rem;font-size:clamp(2.75rem,9vw,8rem);line-height:.86;
   font-weight:500;letter-spacing:-.045em;text-transform:uppercase}
 h1:not(.title){font-family:"Neureal","Suisse",monospace;font-weight:400}
+.nw{white-space:nowrap}
+/* olive branch after the title, drawn in the text colour */
+.sprig{display:inline-block;height:.9em;aspect-ratio:480/340;margin-left:.2em;vertical-align:-.1em;background:currentColor;
+  -webkit-mask:url(olive-branch.png) center/contain no-repeat;mask:url(olive-branch.png) center/contain no-repeat}
 .intro{max-width:34rem;margin:0 0 clamp(2.5rem,6vw,4.5rem);font-size:17px;line-height:1.35}
 
 /* filters: pure CSS, no script */
@@ -62,6 +67,10 @@ summary:hover{background:var(--hover)}
 .tags,.d,.dur{font-size:13px;color:var(--soft)}
 .dur{text-align:right;font-variant-numeric:tabular-nums}
 .p{font-size:15px}
+.t,.p{text-align:left} /* keep right-to-left titles (Arabic) on the column's edge */
+.t .o{display:block;margin-top:.2rem;font-size:15px;color:var(--soft)} /* title in the original script */
+h1.title .o{display:block;margin-top:.15em;font-size:.55em;color:var(--soft);text-align:left}
+.filters .break{flex-basis:100%;height:0}
 details[open] summary .t::after{content:" —";color:var(--soft)}
 details[open]{background:var(--hover)}
 

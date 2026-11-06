@@ -1,7 +1,9 @@
 {%- comment -%}
   Values derived from one recording (include.r), shared by both layouts:
   azb_n (8), azb_code (008), azb_img (dithered PNG path), azb_tags (Song, Testimony),
-  azb_region (East Med), azb_date (Oct 2024), azb_format (Opus, 48 kbps).
+  azb_region (East Med), azb_place (Nablus, Palestine), azb_country_id (palestine),
+  azb_date (Oct 2024), azb_format (Opus, 48 kbps),
+  azb_credit ("Recorded by sonomayrit", or "From <channel>" linking to `source`).
 {%- endcomment -%}
 {%- assign r = include.r -%}
 {%- assign azb_n = r.number | plus: 0 -%}
@@ -23,12 +25,23 @@
 {%- assign region = site.data.azebuche.regions | where: "id", r.region | first -%}
 {%- assign azb_region = region.label | default: r.region -%}
 
+{%- assign azb_country_id = r.country | slugify -%}
+{%- if r.place and r.country -%}{%- assign azb_place = r.place | append: ", " | append: r.country -%}
+{%- else -%}{%- assign azb_place = r.place | default: r.country -%}{%- endif -%}
+
 {%- assign rec = r.recorded | append: "" -%}
 {%- case rec.size -%}
   {%- when 7 -%}{%- assign azb_date = rec | append: "-01" | date: "%b %Y" -%}
   {%- when 10 -%}{%- assign azb_date = rec | date: "%-d %b %Y" -%}
   {%- else -%}{%- assign azb_date = rec -%}
 {%- endcase -%}
+
+{%- assign azb_credit = "" -%}
+{%- if r.source -%}
+  {%- capture azb_credit -%}From <a href="{{ r.source }}">{{ r.source_name | default: "the original source" }}</a>{%- endcapture -%}
+{%- elsif r.recordist -%}
+  {%- assign azb_credit = r.recordist | prepend: "Recorded by " -%}
+{%- endif -%}
 
 {%- assign ext = r.audio | split: "." | last | downcase -%}
 {%- if ext == "opus" -%}{%- assign azb_format = "Opus, 48 kbps" -%}{%- else -%}{%- assign azb_format = ext | upcase -%}{%- endif -%}

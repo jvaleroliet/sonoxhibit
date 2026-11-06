@@ -2,16 +2,17 @@
 ---
 {%- assign d = site.data.azebuche -%}
 {%- assign recs = site.azebuche | sort: "slug" | reverse -%}
-{%- capture filter_ids -%}{% for t in d.tags %}{{ t.id }} {% endfor %}{% for g in d.regions %}{{ g.id }} {% endfor %}{%- endcapture -%}
+{%- assign countries = recs | map: "country" | compact | uniq | sort -%}
+{%- capture filter_ids -%}{% for t in d.tags %}{{ t.id }} {% endfor %}{% for g in d.regions %}{{ g.id }} {% endfor %}{% for c in countries %}{{ c | slugify }} {% endfor %}{%- endcapture -%}
 {%- assign filter_ids = filter_ids | split: " " -%}
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Azebuche</title>
+<title>Olive Harvest Songbook</title>
 <meta name="description" content="{{ d.intro | strip | escape }}">
-<link rel="icon" href="data:,">
+<link rel="icon" href="/azebuche/favicon.png">
 <link rel="stylesheet" href="/azebuche/azebuche.css">
 <style>
 /* filters, generated from _data/azebuche.yml */
@@ -23,7 +24,7 @@
 <div class="wrap">
 {% include azebuche/bar.html %}
 <main>
-<h1>Azebuche</h1>
+<h1>Olive Harvest <span class="nw">Songbook<span class="sprig"></span></span></h1>
 <p class="intro">{{ d.intro }}</p>
 
 <div class="filters" role="group" aria-label="Filter recordings">
@@ -32,7 +33,7 @@
   {%- for t in d.tags %}
     {%- assign c = 0 %}
     {%- for r in recs %}{% if r.tags contains t.id %}{% assign c = c | plus: 1 %}{% endif %}{% endfor %}
-    {%- if c > 0 %}
+    {%- if c > 0 and c < recs.size %}
   <input type="radio" name="f" id="f-{{ t.id }}"><label for="f-{{ t.id }}">{{ t.label }}<sup>{{ c }}</sup></label>
     {%- endif %}
   {%- endfor %}
@@ -43,18 +44,26 @@
   <input type="radio" name="f" id="f-{{ g.id }}"><label for="f-{{ g.id }}">{{ g.label }}<sup>{{ c }}</sup></label>
     {%- endif %}
   {%- endfor %}
+  {%- if countries.size > 0 %}
+  <span class="break"></span>
+  {%- endif %}
+  {%- for name in countries %}
+    {%- assign c = recs | where: "country", name | size %}
+    {%- assign id = name | slugify %}
+  <input type="radio" name="f" id="f-{{ id }}"><label for="f-{{ id }}">{{ name }}<sup>{{ c }}</sup></label>
+  {%- endfor %}
 </div>
 
 <div class="head" aria-hidden="true"><span>No.</span> <span>Title</span> <span>Place</span> <span>Tags</span> <span>Date</span> <span class="r">Length</span></div>
 <ol class="index">
 {%- for r in recs %}
 {%- include azebuche/recording-vars.html r=r %}
-<li id="azb-{{ azb_code }}" data-t="{{ r.region }} {{ r.tags | join: ' ' }}">
+<li id="ohs-{{ azb_code }}" data-t="{{ r.region }} {{ azb_country_id }} {{ r.tags | join: ' ' }}">
   <details>
     <summary class="row">
       <span class="n">({{ azb_n }})</span>
-      <span class="t">{{ r.title }}</span>
-      <span class="p">{{ r.place }}</span>
+      <span class="t" dir="auto">{{ r.title }}{% if r.title_original %} <span class="o" dir="auto">{{ r.title_original }}</span>{% endif %}</span>
+      <span class="p" dir="auto">{{ azb_place }}</span>
       <span class="tags">{{ azb_tags }}</span>
       <span class="d">{{ azb_date }}</span>
       <span class="dur">{{ r.duration }}</span>
@@ -65,7 +74,7 @@
       {%- endif %}
       <div class="txt">
         <p>{{ r.description }}</p>
-        <p class="meta">AZB-{{ azb_code }}. {{ azb_region }}. Recorded by {{ r.recordist }}.{% if r.audio %} {{ azb_format }}.{% endif %} <a href="{{ r.url }}">Full entry, lyrics and notes</a></p>
+        <p class="meta">OHS-{{ azb_code }}.{% if azb_region %} {{ azb_region }}.{% endif %}{% if azb_credit != "" %} {{ azb_credit }}.{% endif %}{% if r.audio %} {{ azb_format }}.{% endif %} <a href="{{ r.url }}">Full entry, lyrics and notes</a></p>
         {%- if r.audio %}
         <audio controls preload="none" src="{{ r.audio }}"></audio>
         <a class="dl" href="{{ r.audio }}" download>Download ({{ r.size }})</a>

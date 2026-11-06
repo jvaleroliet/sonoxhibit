@@ -47,7 +47,7 @@ way. Don't use the **Sign In with GitHub** button: it isn't set up.
 2. On archive.org, click **Upload** (the arrow at the top).
 3. Drop in the .opus file. You can add the original .wav to the same upload.
 4. Fill in the form:
-   - **Title**: `Azebuche AZB-009: title of the recording` (use the right number).
+   - **Title**: `Olive Harvest Songbook OHS-009: title of the recording` (use the right number).
    - **Description**: a sentence about the recording.
    - **Subject tags**: write `azebuche` (this keeps all the archive's sounds
      findable together), plus the place.
@@ -57,7 +57,7 @@ way. Don't use the **Sign In with GitHub** button: it isn't set up.
 6. Open the item. Under **DOWNLOAD OPTIONS** on the right, find the
    **OPUS** file (if it isn't listed, click **SHOW ALL** and look for the
    name ending in `.opus`), right-click it, and choose **Copy link**. The link looks like
-   `https://archive.org/download/azebuche-azb-009/azb-009.opus`.
+   `https://archive.org/download/olive-harvest-songbook-ohs-009/ohs-009.opus`.
 7. Write down the file size shown next to it (for example `4.0 MB`) and the
    length of the recording (for example `11:15`).
 
@@ -122,7 +122,7 @@ using it will lose it. Changing the **Label** is fine.
 
 | What | Where |
 | --- | --- |
-| The recordings' texts | GitHub, folder `_azebuche/`, one file per recording (`azb-009.md`) |
+| The recordings' texts | GitHub, folder `_azebuche/`, one file per recording (`ohs-009.md`) |
 | Archive texts, tags and regions | GitHub, file `_data/azebuche.yml` |
 | Original photos | GitHub, folder `src/azebuche/raw/` |
 | Sound files | archive.org, one item per recording, subject `azebuche` |
@@ -160,7 +160,7 @@ looks broken.
   Dithered PNGs go to `src/azebuche/dithered/`. They aren't committed, and
   every build recreates them.
 - Front matter uses `recorded:`, not `date:`, because Jekyll rejects partial
-  dates. The `AZB-009` code is derived from `number`.
+  dates. The `OHS-009` code is derived from `number`.
 - To make an .opus file and get its length and size:
   `sh tools/azebuche/encode-audio.sh recording.wav` (needs ffmpeg).
 - Fonts are sonomayrit's Suisse Intl (Light, Medium) and Neureal Mono,

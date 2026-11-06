@@ -15,28 +15,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>({{ azb_n }}) {{ page.title }} · Azebuche</title>
+<title>({{ azb_n }}) {{ page.title }} · Olive Harvest Songbook</title>
 <meta name="description" content="{{ page.description | strip | escape }}">
-<link rel="icon" href="data:,">
+<link rel="icon" href="/azebuche/favicon.png">
 <link rel="stylesheet" href="/azebuche/azebuche.css">
 </head>
 <body>
 <div class="wrap">
 {% include azebuche/bar.html %}
 <main>
-<h1 class="title"><span class="n">({{ azb_n }})</span> {{ page.title }}</h1>
+<h1 class="title"><span class="n">({{ azb_n }})</span> <span dir="auto">{{ page.title }}</span>{% if page.title_original %} <span class="o" dir="auto">{{ page.title_original }}</span>{% endif %}</h1>
 
 <div class="rec">
   <table class="facts">
-    <tr><th scope="row">No.</th><td>AZB-{{ azb_code }}</td></tr>
-    <tr><th scope="row">Place</th><td>{{ page.place }}</td></tr>
+    <tr><th scope="row">No.</th><td>OHS-{{ azb_code }}</td></tr>
+    {%- if page.place %}
+    <tr><th scope="row">Place</th><td dir="auto">{{ page.place }}</td></tr>
+    {%- endif %}
+    {%- if page.country %}
+    <tr><th scope="row">Country</th><td>{{ page.country }}</td></tr>
+    {%- endif %}
+    {%- if azb_region %}
     <tr><th scope="row">Region</th><td>{{ azb_region }}</td></tr>
+    {%- endif %}
+    {%- if azb_date != "" %}
     <tr><th scope="row">Recorded</th><td>{{ azb_date }}</td></tr>
+    {%- endif %}
     {%- if page.language %}
     <tr><th scope="row">Language</th><td>{{ page.language }}</td></tr>
     {%- endif %}
+    {%- if page.recordist %}
     <tr><th scope="row">Recordist</th><td>{{ page.recordist }}</td></tr>
+    {%- endif %}
+    {%- if page.source %}
+    <tr><th scope="row">Source</th><td><a href="{{ page.source }}">{{ page.source_name | default: page.source }}</a></td></tr>
+    {%- endif %}
+    {%- if page.source_title %}
+    <tr><th scope="row">Video title</th><td dir="auto">{{ page.source_title }}</td></tr>
+    {%- endif %}
+    {%- if azb_tags != "" %}
     <tr><th scope="row">Tags</th><td>{{ azb_tags }}</td></tr>
+    {%- endif %}
     <tr><th scope="row">Length</th><td>{{ page.duration }}</td></tr>
     <tr><th scope="row">License</th><td>{{ page.license }}</td></tr>
   </table>
@@ -60,12 +79,12 @@
 <nav class="pager" aria-label="More recordings">
   {%- if prev %}
   {%- assign pn = prev.number | plus: 0 %}
-  <a href="{{ prev.url }}" rel="prev">Previous: ({{ pn }}) {{ prev.title }}</a>
+  <a href="{{ prev.url }}" rel="prev">Previous: ({{ pn }}) <span dir="auto">{{ prev.title }}</span></a>
   {%- endif %}
-  <a href="/azebuche/#azb-{{ azb_code }}">Back to the index</a>
+  <a href="/azebuche/#ohs-{{ azb_code }}">Back to the index</a>
   {%- if next %}
   {%- assign nn = next.number | plus: 0 %}
-  <a href="{{ next.url }}" rel="next">Next: ({{ nn }}) {{ next.title }}</a>
+  <a href="{{ next.url }}" rel="next">Next: ({{ nn }}) <span dir="auto">{{ next.title }}</span></a>
   {%- endif %}
 </nav>
 </main>
