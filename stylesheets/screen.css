@@ -273,6 +273,14 @@ h4 {
   border: none;
 }
 
+/* Horizontal lines (--- in a post): same width as the text column */
+#exhibit hr {
+  width: 60%;
+  margin: 1.5em 0;
+  border: 0;
+  border-top: 1px solid #000;
+}
+
 /* Every photo is exactly as wide as the text column.
    Just write {% picture "..." %} on its own line - it lands in a <p>,
    which is already text-width, and the image fills it. */
@@ -1128,6 +1136,10 @@ textarea {
 
   #exhibit img.sinBorde {
     border: none;
+  }
+
+  #exhibit hr {
+    width: 100%;
   }
 
   /* Text is full width on phones, so photos are too */
