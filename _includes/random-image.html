@@ -1,0 +1,33 @@
+{%- comment -%}
+  Shows one image picked at random from a list, on every page load.
+  Usage:  {% include random-image.html images=site.data.home.images %}
+
+  All images are built into <template> tags, which browsers don't download.
+  The script picks one, avoids repeating the last one this visitor saw,
+  and puts only that one on the page.
+{%- endcomment -%}
+{%- assign first_image = include.images | first -%}
+<div class="random-image" markdown="0">
+{%- for image in include.images %}
+<template>{% picture "{{ image }}" %}</template>
+{%- endfor %}
+<noscript>{% picture "{{ first_image }}" %}</noscript>
+<script>
+(function () {
+  var script = document.currentScript;
+  var options = script.parentNode.querySelectorAll('template');
+  if (!options.length) return;
+
+  var last = -1;
+  try { last = parseInt(localStorage.getItem('home-image'), 10); } catch (e) {}
+
+  var pick = Math.floor(Math.random() * options.length);
+  if (options.length > 1 && pick === last) {
+    pick = (pick + 1 + Math.floor(Math.random() * (options.length - 1))) % options.length;
+  }
+
+  try { localStorage.setItem('home-image', pick); } catch (e) {}
+  script.parentNode.insertBefore(options[pick].content.cloneNode(true), script);
+})();
+</script>
+</div>

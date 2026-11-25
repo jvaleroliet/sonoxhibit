@@ -827,6 +827,26 @@ textarea {
   color: #000;
 }
 
+/* Random image (_includes/random-image.html).
+   Every photo gets the same 3:2 frame, as wide as the text column, so all
+   photos have the same height. Horizontal photos fill it; vertical ones
+   show at the same height, narrower and centered. */
+#exhibit .random-image {
+  width: 60%;
+  aspect-ratio: 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exhibit .random-image img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
 /* ============================================
    GALLERY GRID (_includes/gallery.html)
    ============================================ */
@@ -1139,6 +1159,10 @@ textarea {
   }
 
   #exhibit hr {
+    width: 100%;
+  }
+
+  #exhibit .random-image {
     width: 100%;
   }
 

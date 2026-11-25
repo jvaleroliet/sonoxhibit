@@ -1,0 +1,39 @@
+# Photos for the home page.
+# Every visit shows one of these at random (never the same one twice in a row).
+# Paths are inside src/Images/unprocessed/ - add or remove lines freely.
+
+images:
+  - projects/losviajesdelagua1.JPG
+  - projects/losviajesdelagua2.JPG
+  - projects/estrecho1.JPG
+  - projects/home1.JPG
+  - projects/home2.jpg
+  - projects/home3.JPG
+  - projects/home4.JPG
+  - projects/home5.jpg
+  - projects/home7.JPG
+  - projects/home8.jpg
+  - projects/home10.JPG
+  - projects/home11.JPG
+  - projects/home12.JPG
+  - projects/home14.JPG
+  - projects/home15.JPG
+  - projects/home17.JPG
+  - projects/home18.JPG
+  - projects/home19.jpg
+  - projects/home20.jpg
+  - projects/home21.JPG
+  - projects/home22.jpg
+  - projects/home24.JPG
+  - projects/home25.JPG
+  - projects/home26.JPG
+  - projects/home27.JPG
+  - projects/home28.JPG
+  - projects/home29.JPG
+  - projects/home30.JPG
+  - projects/home32.jpg
+  - projects/home33.JPG
+  - projects/home34.JPG
+  - projects/home35.JPG
+  - projects/home36.JPG
+  - projects/home37.JPG
