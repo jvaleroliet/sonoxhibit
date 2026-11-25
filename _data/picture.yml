@@ -4,18 +4,30 @@
 
 media_queries:
   mobile: "max-width: 552px"
+  phone: "max-width: 736px"
 
 presets:
   # Small square thumbnails for the /links/ page
   thumb:
+    formats: [webp, original]   # webp is much smaller; original as backup
     widths: [128, 192]
     fallback_width: 128
     size: 64px
 
   # Big images for "featured" links on the /links/ page
   featured:
+    formats: [webp, original]   # webp is much smaller; original as backup
     widths: [520, 1040]
     fallback_width: 520
     size: 520px
     sizes:
       mobile: calc(100vw - 34px)
+
+  # Covers in gallery grids (Radio Alhara Index)
+  gallery:
+    formats: [webp, original]   # webp is much smaller; original as backup
+    widths: [300, 600]
+    fallback_width: 300
+    size: 200px
+    sizes:
+      phone: calc(50vw - 24px)

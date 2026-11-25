@@ -1,0 +1,14 @@
+{%- comment -%}
+  Grid of covers with title, date and optional notes link.
+  Usage in a post:  {% include gallery.html items=site.data.radioalhara %}
+  Each item needs: title, image, listen. Optional: date, notes.
+{%- endcomment -%}
+<div class="gallery" markdown="0">
+{%- for item in include.items %}
+<div class="gallery-item">
+<a class="gallery-cover" href="{{ item.listen }}">{% picture gallery "{{ item.image }}" 4:5 %}</a>
+<a class="gallery-title" href="{{ item.listen }}">{{ item.title | escape }}</a>
+<div class="gallery-meta">{{ item.date }}{% if item.notes %}{% if item.date %} · {% endif %}<a href="{{ item.notes }}">notes</a>{% endif %}</div>
+</div>
+{%- endfor %}
+</div>

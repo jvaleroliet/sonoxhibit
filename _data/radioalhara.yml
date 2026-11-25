@@ -1,0 +1,73 @@
+# Episodes shown in the grid on the Radio Alhara Index page.
+# Newest first - the grid shows them in this order.
+#
+#   title:  episode name
+#   date:   shown under the title
+#   image:  cover, from src/Images/unprocessed/
+#   listen: where the cover and title link to (SoundCloud)
+#   notes:  optional - page with notes and info, shown as a "notes" link
+
+- title: "international solidarity w/ gabriel sabot"
+  date: 15.11.26
+  image: projects/radioalhara/2611.png
+  listen: https://soundcloud.com/sonomayrit/international-solidarity
+
+- title: "spanish revolution w/ gabriel sabot"
+  date: 22.09.26
+  image: projects/radioalhara/2609.png
+  listen: https://soundcloud.com/sonomayrit/spanish-revolution
+  notes: /exhibit/Radio-Alhara2609.html
+
+- title: cencerros
+  date: 21.06.26
+  image: projects/radioalhara/2606.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo
+
+- title: mediaphone/tape
+  date: 22.02.26
+  image: projects/radioalhara/2602.png
+  listen: https://soundcloud.com/sonomayrit/mediaphone-tape
+  notes: /exhibit/Radio-Alhara2602.html
+
+- title: mediaphone/shellac
+  date: 23.01.26
+  image: projects/radioalhara/2601.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-mediaphoneshellac-radio-alhara-230125
+  notes: /exhibit/Radio-Alhara2601.html
+
+- title: mediaphone/wax
+  date: 21.12.25
+  image: projects/radioalhara/2512.png
+  listen: https://soundcloud.com/sonomayrit/db9b6858-8f45-45a4-a1f7-b6eef06e2989
+  notes: /exhibit/Radio-Alhara2512.html
+
+- title: urbs soni
+  date: 16.11.25
+  image: projects/radioalhara/2511.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-urbs-soni-radio-alhara-161125
+
+- title: interferences
+  date: 19.10.25
+  image: projects/radioalhara/2510.png
+  listen: /exhibit/Interferences.html
+  notes: /exhibit/Interferences.html
+
+- title: tape zin:es
+  date: 21.09.25
+  image: projects/radioalhara/2509.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-tape-zines-radio-alhara-210925
+
+- title: viajes del agua
+  date: 17.08.25
+  image: projects/radioalhara/2508.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-viajes-del-agua-radio-alhara-17082025
+
+- title: soledad sonora
+  date: 31.07.25
+  image: projects/radioalhara/2507.png
+  listen: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-soledad-sonora-radio-alhara-31072025
+
+- title: salterio noise
+  date: 21.05.25
+  image: projects/radioalhara/2505.png
+  listen: https://on.soundcloud.com/8xbTxHUYomus9Pfg6

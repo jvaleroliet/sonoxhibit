@@ -820,6 +820,60 @@ textarea {
 }
 
 /* ============================================
+   GALLERY GRID (_includes/gallery.html)
+   ============================================ */
+
+#exhibit .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 16px;
+  width: 60%;               /* same as the text column */
+  margin: 2em 0;
+}
+
+#exhibit .gallery-item {
+  min-width: 0;             /* let long titles wrap inside the column */
+}
+
+#exhibit .gallery-cover {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 0;           /* no gap under the image */
+}
+
+#exhibit .gallery-cover img {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* Hover: cyan tint over the cover, same colour as link hover */
+#exhibit .gallery-cover:hover {
+  background-color: #00fff7;
+}
+
+/* How see-through the cover gets on hover: lower = more cyan */
+#exhibit .gallery-cover:hover img {
+  opacity: 0.6;
+}
+
+#exhibit a.gallery-title:link,
+#exhibit a.gallery-title:visited {
+  display: inline;   /* hover highlight only behind the text */
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+#exhibit .gallery-meta {
+  margin-top: 4px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* ============================================
    MOBILE RESPONSIVE STYLES
    Based on indexhibit mobile architecture
    All media queries at end for proper cascade override
@@ -1079,6 +1133,13 @@ textarea {
   /* Text is full width on phones, so photos are too */
   #exhibit div[style*="max-width"] {
     max-width: 100% !important;
+  }
+
+  /* Gallery: 2 columns, full width */
+  #exhibit .gallery {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 12px;
   }
 
   /* Embeds (SoundCloud, YouTube, Bandcamp...) - full width, no overflow */
