@@ -15,17 +15,6 @@
    MODERN CSS RESET
    Based on best practices from modern frameworks
    ============================================ */
-@font-face {
-  font-family: 'Suisse';
-  src: url(../src/Fonts/SuisseIntl-Light.otf) format('opentype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Neureal';
-  src: url(../src/Fonts/NeurealTrial-Mono.otf) format('opentype');
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -888,7 +877,7 @@ textarea {
     line-height: 34px;
     font-size: 22px;
     text-align: center;
-    font-family: 'Neureal', monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   #mobile-header a {
