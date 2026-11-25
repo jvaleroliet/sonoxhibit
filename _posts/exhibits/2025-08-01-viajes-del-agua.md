@@ -5,12 +5,22 @@ layout: default
 title: Los Viajes del Agua
 section: Works
 category: exhibit
+slideshow:
+  - projects/losviajesdelagua1.JPG
+  - projects/losviajesdelagua2.JPG
+  - projects/losviajesdelagua3.JPG
+  - projects/losviajesdelagua4.JPG
+  - projects/losviajesdelagua5.JPG
+  - projects/losviajesdelagua6.JPG
+  - projects/losviajesdelagua7.JPG
+  - projects/losviajesdelagua8.JPG
+  - projects/losviajesdelagua9.JPG
+  - projects/losviajesdelagua10.JPG
 ---
 
+{% include slideshow.html images=page.slideshow %}
+
 <iframe width="60%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2154250386&color=%23cccccc&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sonomayrit" title="sonomayrit" target="_blank" style="color: #cccccc; text-decoration: none;">sonomayrit</a> · <a href="https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-viajes-del-agua-radio-alhara-17082025" title="sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025" target="_blank" style="color: #cccccc; text-decoration: none;">sono mayrit - aguaespejo: Viajes del Agua, Radio Alhara, 17.08.2025</a></div>
-
-
-
 
 *Los Viajes del Agua* is an ancient underground watering system built under Madrid in the 9th century, during its andalusian period, which was essential to the city's development. The technology, called *qanat* or *karez*, was invented in Iran 3,000 years ago and uses gravity to transport drinking water from aquifers to the surface without the need for pumping.
 
@@ -21,24 +31,3 @@ The work features a sound collage with field recordings I did from the watering 
 The recordings were made in March, May and June of 2025. It was produced with DIY microphones (clippy, contact and hydrophones) specially designed to reach the underground canals from the surface, with small mic heads and long cables.
 
 Photos by Miguel Gallego.
-
-{% picture  "projects/losviajesdelagua1.JPG" %}
-
-{% picture  "projects/losviajesdelagua2.JPG" %}
-
-{% picture  "projects/losviajesdelagua3.JPG" %}
-
-{% picture  "projects/losviajesdelagua4.JPG" %}
-
-{% picture  "projects/losviajesdelagua5.JPG" %}
-
-{% picture  "projects/losviajesdelagua6.JPG" %}
-
-{% picture  "projects/losviajesdelagua7.JPG" %}
-
-{% picture  "projects/losviajesdelagua8.JPG" %}
-
-{% picture  "projects/losviajesdelagua9.JPG" %}
-
-{% picture  "projects/losviajesdelagua10.JPG" %}
-

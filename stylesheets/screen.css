@@ -876,10 +876,10 @@ textarea {
 
 #exhibit .slide img {
   width: auto;
-  height: 100%;
-  max-width: 100%;
+  height: auto;
+  max-width: 100%;          /* shrink to fit the frame; the border hugs the photo */
+  max-height: 100%;
   margin: 0;
-  object-fit: contain;
 }
 
 #exhibit .slideshow-nav {

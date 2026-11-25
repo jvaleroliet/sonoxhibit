@@ -8,11 +8,14 @@
 
   and put  {% include slideshow.html images=page.slideshow %}  where it should appear.
 
+  The frame is 3:2 by default. For wider photos pass a ratio, e.g.
+    {% include slideshow.html images=page.slideshow ratio="16 / 9" %}
+
   Only the current photo (and the next one) are downloaded.
   Without JavaScript only the first photo is shown.
 {%- endcomment -%}
 <div class="slideshow" markdown="0">
-<div class="slideshow-frame">
+<div class="slideshow-frame"{% if include.ratio %} style="aspect-ratio: {{ include.ratio }}"{% endif %}>
 {%- for image in include.images %}
 {%- if forloop.first %}
 <div class="slide is-current">{% picture slideshow "{{ image }}" %}</div>
