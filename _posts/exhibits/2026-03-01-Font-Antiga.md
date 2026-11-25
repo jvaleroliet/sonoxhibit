@@ -9,9 +9,7 @@ category: exhibit
 
 # Introduction
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/Fuente Antigua_0057.JPG" %}
-</div>
+{% picture  "projects/Fuente Antigua_0057.JPG" %}
 
 **La Font Antiga** documents Crevillente's historical hydraulic system, which was inherited from the Andalusian period and has at least 800 years. It focuses on the _qanawaat_, which are underground aqueducts that carried water from mountain springs to the town center and its orchards for centuries. However, in the 1970s, the extraction of water from the northern part of the aquifer drastically reduced the availability of this resource. This caused the gradual deterioration and abandonment of the galleries, irrigation ditches, aqueducts, and mills. This transformation affected not only the landscape and ecosystem but also the collective memory of the community that depended on these infrastructures. 
 
@@ -21,18 +19,10 @@ My investigation took place from October to November 2025 as part of the [Las Ci
 
 
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/Fuente Antigua_0283.JPG" %}
-</div>
+{% picture  "projects/Fuente Antigua_0283.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/Fuente Antigua_0193.JPG" %}
-</div>
+{% picture  "projects/Fuente Antigua_0193.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/Fuente Antigua_0226.JPG" %}
-</div>
+{% picture  "projects/Fuente Antigua_0226.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/fontantiga_presentacion.JPG" %}
-</div>
+{% picture  "projects/fontantiga_presentacion.JPG" %}

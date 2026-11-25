@@ -6,7 +6,7 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes'>
 	<title>{{ site.title }} - {{page.title}}</title>
-	<meta name='description' content="{{page.content | truncate: 50 }}" />
+	<meta name='description' content="{{ page.content | strip_html | normalize_whitespace | truncate: 155 | escape }}" />
 	<meta name='author' content="{{ site.author }}" />
 	<meta name='generator' content="Jekyll" />
 	<link rel='stylesheet' href='/stylesheets/screen.css' type='text/css' />
@@ -19,7 +19,7 @@
 	
 	<!-- Navigation sidebar -->
 	<div id='closing_layer'></div>
-	<div id='nav-toggle' class='index-toggle'>
+	<div id='nav-toggle' class='index-toggle' role='button' tabindex='0' aria-label='Menu' aria-expanded='false'>
 		<span></span>
 	</div>
 	
@@ -91,21 +91,25 @@
 	
 	<script>
 		// Navigation toggle for mobile
-		const navToggle = document.querySelector('.index-toggle');
+		const navToggle = document.getElementById('nav-toggle');
 		const indexDiv = document.getElementById('index');
 		const closingLayer = document.getElementById('closing_layer');
-		
-		if (navToggle) {
-			navToggle.addEventListener('click', function() {
-				indexDiv.classList.toggle('mobile-open');
-				closingLayer.classList.toggle('active');
-			});
-			
-			closingLayer.addEventListener('click', function() {
-				indexDiv.classList.remove('mobile-open');
-				closingLayer.classList.remove('active');
-			});
+		function setMenu(open) {
+			indexDiv.classList.toggle('mobile-open', open);
+			closingLayer.classList.toggle('active', open);
+			navToggle.classList.toggle('active', open);
+			navToggle.setAttribute('aria-expanded', open);
+			document.body.classList.toggle('menu-open', open);
 		}
+		navToggle.addEventListener('click', function () {
+			setMenu(!indexDiv.classList.contains('mobile-open'));
+		});
+		closingLayer.addEventListener('click', function () {
+			setMenu(false);
+		});
+		navToggle.addEventListener('keydown', function (e) {
+			if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.click(); }
+		});
 	</script>
 </body>
 </html>

@@ -274,42 +274,31 @@ h4 {
 
 /* image styling */
 #exhibit img {
-  border: 1px solid #ddd;
+  border: 1px solid #000;
   margin-bottom: 1em;
   margin-top: 1em;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  width: auto;
+  box-sizing: border-box;  /* keep the 1px border inside the column width */
 }
 
 #exhibit img.sinBorde {
   border: none;
 }
 
-/* jekyll_picture_tag responsive sizing */
-#exhibit picture {
+/* Every photo is exactly as wide as the text column.
+   Just write {% picture "..." %} on its own line - it lands in a <p>,
+   which is already text-width, and the image fills it. */
+#exhibit picture,
+#exhibit img {
+  width: 100%;
   max-width: 100%;
-  width: auto;
-  display: block;
-}
-
-#exhibit picture img {
-  max-width: 100%;
-  width: auto;
   height: auto;
   display: block;
 }
 
-/* Image wrapper container for constraining size */
-div[style*="max-width"] picture,
-div[style*="max-width"] img {
-  max-width: 100% !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-div[style*="max-width"] {
+/* Old posts wrap photos in <div style="max-width: NN%">. Ignore the
+   percentage so those photos also match the text column. */
+#exhibit div[style*="max-width"] {
+  max-width: 60% !important;   /* same as #exhibit p */
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -864,12 +853,16 @@ textarea {
    TABLET & MOBILE (min-width: 320px and max-width: 736px)
    ============================================ */
 
-@media only screen and (min-width: 320px) and (max-width: 736px) {
+@media only screen and (max-width: 736px) {
   body {
     -webkit-text-size-adjust: 100%;
     font-size: 14px;
-    padding: 10px 10px 0 10px;
-    padding-top: 60px;
+    padding: 50px 0 0 0;
+  }
+
+  /* Lock page scroll while the menu is open */
+  body.menu-open {
+    overflow: hidden;
   }
 
   /* Mobile header - always visible */
@@ -885,6 +878,8 @@ textarea {
     box-sizing: border-box;
     z-index: 9998;
     overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
   }
 
   #mobile-header p {
@@ -912,12 +907,120 @@ textarea {
     top: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
+    height: auto;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 9999;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
+    line-height: 1.3;
+    -webkit-transition: left 200ms ease-in-out;
+    transition: left 200ms ease-in-out;
+  }
+
+  #index.mobile-open {
+    left: 0;
+  }
+
+  /* Big, easy-to-tap menu items */
+  #index ul.section {
+    margin-bottom: 1.25em;
+  }
+
+  #index ul.section span.section_title,
+  #index ul.section span.section_title a {
+    display: block;
+    font-size: 22px;
+    padding: 10px 0 4px;
+  }
+
+  #index ul.section li.exhibit_title a {
+    display: block;
+    font-size: 20px;
+    padding: 11px 0 11px 12px;
+    min-height: 44px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 255, 247, 0.4);
+  }
+
+  #index .bot {
+    padding-top: 40px;
+  }
+
+  #index .bot li a {
+    display: block;
+    font-size: 18px;
+    padding: 11px 0;
+  }
+
+  /* Hamburger toggle - fixed so it stays reachable while scrolling */
+  #nav-toggle {
+    display: block;
+    position: fixed;
+    top: 3px;
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    z-index: 10000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 1px;
+    background: #000;
+    content: '';
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+
+  #nav-toggle span {
+    left: 10px;
+    top: 20px;
+  }
+
+  #nav-toggle span:before {
+    left: 0;
+    top: -7px;
+  }
+
+  #nav-toggle span:after {
+    left: 0;
+    top: 7px;
+  }
+
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+
+  #nav-toggle.active span:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  #nav-toggle.active span:after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* Overlay when menu is open */
+  #closing_layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9997;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  #closing_layer.active {
+    display: block;
   }
 
   #exhibit {
@@ -952,6 +1055,11 @@ textarea {
     margin-bottom: 1em;
   }
 
+  /* Justified text leaves big gaps on narrow screens */
+  #exhibit p {
+    text-align: left;
+  }
+
   /* Lists - full width on mobile */
   #exhibit ul,
   #exhibit ol {
@@ -979,6 +1087,23 @@ textarea {
     border: none;
   }
 
+  /* Text is full width on phones, so photos are too */
+  #exhibit div[style*="max-width"] {
+    max-width: 100% !important;
+  }
+
+  /* Embeds (SoundCloud, YouTube, Bandcamp...) - full width, no overflow */
+  #exhibit iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #exhibit iframe[src*="youtube"],
+  #exhibit iframe[src*="vimeo"] {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
   #exhibit .container #img-container {
     margin-top: 0;
   }
@@ -988,19 +1113,19 @@ textarea {
   }
 
   /* Container padding */
-  #index .container,
+  #index .container {
+    padding: 16px 24px 32px;
+  }
+
   #exhibit .container {
-    padding: 15px;
+    padding: 16px;
   }
 
   /* Typography adjustments */
-  #index ul.section span.section_title,
-  #index ul.section span.section_title a {
-    font-size: 16px;
-  }
-
   #index .top {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 44px;  /* aligns with the hamburger */
+    margin-bottom: 16px;
   }
 
   .page-title {
@@ -1110,7 +1235,7 @@ h3.entry-title {
   height: auto;
   display: block;
   margin: 1.5em 0;
-  border: 1px solid #ddd;
+  border: 1px solid #000;
 }
 
 /* Entry code blocks */
@@ -1250,92 +1375,6 @@ h3.entry-title {
     font-size: 10px;
   }
 
-  /* Mobile hamburger toggle button */
-  .index-toggle {
-    display: block;
-    height: 35px;
-    width: 35px;
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    z-index: 5000000;
-    text-indent: -9999px;
-    cursor: pointer;
-  }
-
-  /* Overlay when menu is open */
-  #closing_layer {
-    display: none;
-    height: 100%;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 3;
-    background: rgba(0, 0, 0, 0.5);
-  }
-
-  /* Hamburger icon */
-  #nav-toggle {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    padding: 10px 0 16px 25px;
-  }
-
-  #nav-toggle span,
-  #nav-toggle span:before,
-  #nav-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 3px;
-    width: 25px;
-    background: #000;
-    position: absolute;
-    display: block;
-    content: '';
-  }
-
-  #nav-toggle span:before {
-    top: -7px;
-  }
-
-  #nav-toggle span:after {
-    bottom: -7px;
-  }
-
-  #nav-toggle span,
-  #nav-toggle span:before,
-  #nav-toggle span:after {
-    -webkit-transition: all 250ms ease-in-out;
-    transition: all 250ms ease-in-out;
-  }
-
-  #nav-toggle.active span {
-    background-color: transparent;
-  }
-
-  #nav-toggle.active span:before,
-  #nav-toggle.active span:after {
-    top: 0;
-  }
-
-  #nav-toggle.active span:before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  #nav-toggle.active span:after {
-    -webkit-transform: translateY(-7px) rotate(-45deg);
-    -ms-transform: translateY(-7px) rotate(-45deg);
-    transform: translateY(-7px) rotate(-45deg);
-    top: 7px;
-  }
-
   /* Fix extra space under images */
   .asset {
     line-height: 0;
@@ -1368,35 +1407,17 @@ h3.entry-title {
    SMALL PHONES (max-width: 480px)
    ============================================ */
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   body {
     font-size: 13px;
   }
 
   h1, h2, h3, h4 {
-    font-size: 13px;
-  }
-
-  #index ul.section span.section_title,
-  #index ul.section span.section_title a {
     font-size: 14px;
   }
 
-  #index .top {
-    font-size: 18px;
-  }
-
   .page-title {
-    font-size: 15px;
-  }
-
-  #index .bot {
-    padding-top: 40px;
-  }
-
-  #index .container,
-  #exhibit .container {
-    padding: 12px 9px;
+    font-size: 17px;
   }
 
   .buttons button a {

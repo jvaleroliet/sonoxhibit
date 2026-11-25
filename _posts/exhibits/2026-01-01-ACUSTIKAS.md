@@ -7,9 +7,7 @@ section: Works
 category: exhibit
 ---
 
-<div style="max-width: 60%; margin: 0 auto;">
 {% picture  "projects/ACUSTIKAS1.JPG"%}
-</div>
 
 
 *ACUSTIKAS* is an ongoing project documenting the soundscape of Vallekas, the neighborhood where I was born and where I lived for 25 years.

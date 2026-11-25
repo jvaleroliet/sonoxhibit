@@ -14,14 +14,8 @@ Starting at dawn on Saturday 3 May 2025, close to the Greenwich Meridian, Reveil
 For this project, I built a streambox (with DIY microphones + Raspberry PI Zero) and placed in [ElisaBeet social garden](https://streams.soundtent.org/2025/streams/utc2_-9c7e0d40-3f21-4849-8ef4-a3acc1042219), Wedding, Berlin. We were able to hear birds, insects, and the city slowly waking up.
 
 
-<div style="max-width: 30%; margin: 0 auto;">
 {% picture  "projects/streambox1.jpg" --link {{ page.external_link }} %}
-</div>
 
-<div style="max-width: 30%; margin: 0 auto;">
 {% picture  "projects/streambox2.jpg" --link {{ page.external_link }} %}
-</div>
 
-<div style="max-width: 30%; margin: 0 auto;">
 {% picture  "projects/streambox3.jpg" --link {{ page.external_link }} %}
-</div>

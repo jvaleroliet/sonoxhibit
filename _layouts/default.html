@@ -11,12 +11,12 @@
 				{% if exhibit.home == true and counter == 0 %}
 					{% assign counter = 1 %}
 					<title>{{ site.title }} - {{exhibit.title}}</title>
-					<meta name='description' content="{{exhibit.content | truncate: 50 }}" />
+					<meta name='description' content="{{ exhibit.content | strip_html | normalize_whitespace | truncate: 155 | escape }}" />
 				{% endif %}
 			{%  endfor %}
 		{% else %}
 			<title>{{ site.title }} - {{page.title}}</title>
-			<meta name='description' content="{{page.content | truncate: 50 }}" />
+			<meta name='description' content="{{ page.content | strip_html | normalize_whitespace | truncate: 155 | escape }}" />
 		{% endif %}
 		<meta name='author' content="{{ site.author }}" />
 		<meta name='copyright' content="" />
@@ -33,7 +33,7 @@
 		<!-- Mobile overlay -->
 		<div id='closing_layer'></div>
 		<!-- Mobile navigation toggle -->
-		<div id='nav-toggle' class='index-toggle'>
+		<div id='nav-toggle' class='index-toggle' role='button' tabindex='0' aria-label='Menu' aria-expanded='false'>
 			<span></span>
 		</div>
 		<div id='index'>
@@ -107,15 +107,24 @@
 		const navToggle = document.getElementById('nav-toggle');
 		const index = document.getElementById('index');
 		const closingLayer = document.getElementById('closing_layer');
-		
-		function toggleMenu() {
-			navToggle.classList.toggle('active');
-			index.style.left = index.style.left === '0px' ? '-100vw' : '0px';
-			closingLayer.style.display = index.style.left === '0px' ? 'block' : 'none';
+
+		function setMenu(open) {
+			index.classList.toggle('mobile-open', open);
+			closingLayer.classList.toggle('active', open);
+			navToggle.classList.toggle('active', open);
+			navToggle.setAttribute('aria-expanded', open);
+			document.body.classList.toggle('menu-open', open);
 		}
-		
-		navToggle.addEventListener('click', toggleMenu);
-		closingLayer.addEventListener('click', toggleMenu);
+
+		navToggle.addEventListener('click', function () {
+			setMenu(!index.classList.contains('mobile-open'));
+		});
+		closingLayer.addEventListener('click', function () {
+			setMenu(false);
+		});
+		navToggle.addEventListener('keydown', function (e) {
+			if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navToggle.click(); }
+		});
 	</script>
 	<script data-goatcounter="https://sonomayrit.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>

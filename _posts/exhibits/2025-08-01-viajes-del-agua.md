@@ -22,43 +22,23 @@ The recordings were made in March, May and June of 2025. It was produced with DI
 
 Photos by Miguel Gallego.
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua1.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua1.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua2.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua2.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua3.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua3.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua4.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua4.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua5.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua5.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua6.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua6.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua7.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua7.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua8.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua8.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua9.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua9.JPG" %}
 
-<div style="max-width: 60%; margin: 0 auto;">
-    {% picture  "projects/losviajesdelagua10.JPG" %}
-</div>
+{% picture  "projects/losviajesdelagua10.JPG" %}
 
