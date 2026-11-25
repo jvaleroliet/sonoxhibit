@@ -10,7 +10,7 @@ category: exhibit
 {% picture  "projects/aporee.jpg"%}
 
 
-*ACUSTIKAS* is an ongoing project documenting the soundscape of Vallekas, the neighborhood where I was born and where I lived for 25 years.
+*ACUSTIKAS* is an ongoing project documenting the soundscape of Vallecas, the neighborhood where I was born and where I lived for 25 years.
 
 Vallecas is a district in southeastern Madrid, formed by Puente de Vallecas and Villa de Vallecas. With a strong working-class and antifascist history, it grew rapidly and in an unorganized way in the 1950s through spanish rural migration linked to industrial and construction labor.
 
