@@ -848,6 +848,60 @@ textarea {
 }
 
 /* ============================================
+   SLIDESHOW (_includes/slideshow.html)
+   ============================================ */
+
+#exhibit .slideshow {
+  width: 60%;               /* same as the text column */
+  margin: 0 0 2em;
+}
+
+/* One photo at a time, in a fixed 3:2 frame.
+   (Without JavaScript, a <noscript> style in the include shows all photos.) */
+#exhibit .slideshow-frame {
+  aspect-ratio: 3 / 2;
+  cursor: pointer;
+}
+
+#exhibit .slide {
+  display: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#exhibit .slide.is-current {
+  display: flex;
+}
+
+#exhibit .slide img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
+#exhibit .slideshow-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+#exhibit .slideshow-nav a:link,
+#exhibit .slideshow-nav a:visited {
+  color: #000;
+  text-decoration: none;
+  padding: 6px 0;           /* bigger tap target on phones */
+}
+
+#exhibit .slideshow-count {
+  color: #666;
+}
+
+/* ============================================
    GALLERY GRID (_includes/gallery.html)
    ============================================ */
 
@@ -1163,6 +1217,10 @@ textarea {
   }
 
   #exhibit .random-image {
+    width: 100%;
+  }
+
+  #exhibit .slideshow {
     width: 100%;
   }
 

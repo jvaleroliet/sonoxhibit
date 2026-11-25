@@ -1,0 +1,71 @@
+{%- comment -%}
+  Simple previous / next slideshow.
+  Usage in a post: list the photos in the front matter, e.g.
+
+    slideshow:
+      - projects/photo1.JPG
+      - projects/photo2.JPG
+
+  and put  {% include slideshow.html images=page.slideshow %}  where it should appear.
+
+  Only the current photo (and the next one) are downloaded.
+  Without JavaScript only the first photo is shown.
+{%- endcomment -%}
+<div class="slideshow" markdown="0">
+<div class="slideshow-frame">
+{%- for image in include.images %}
+{%- if forloop.first %}
+<div class="slide is-current">{% picture slideshow "{{ image }}" %}</div>
+{%- else %}
+<div class="slide"><template>{% picture slideshow "{{ image }}" %}</template></div>
+{%- endif %}
+{%- endfor %}
+</div>
+<noscript><style>#exhibit .slideshow-nav { display: none; }</style></noscript>
+<div class="slideshow-nav">
+<a href="#" class="slideshow-prev">&larr; previous</a>
+<span class="slideshow-count">1 / {{ include.images | size }}</span>
+<a href="#" class="slideshow-next">next &rarr;</a>
+</div>
+<script>
+(function () {
+  var root = document.currentScript.parentNode;
+  var slides = root.querySelectorAll('.slide');
+  var count = root.querySelector('.slideshow-count');
+  var current = 0;
+  if (slides.length < 2) return;
+
+  // Photos after the first wait inside <template> (not downloaded)
+  // until they are needed; this puts the real image in place.
+  function load(slide) {
+    var t = slide.querySelector('template');
+    if (t) slide.replaceChild(t.content.cloneNode(true), t);
+  }
+
+  // Start downloading the next photo so clicking "next" feels instant
+  function preloadNext() {
+    load(slides[(current + 1) % slides.length]);
+  }
+
+  function show(i) {
+    slides[current].classList.remove('is-current');
+    current = (i + slides.length) % slides.length;   // wraps around
+    load(slides[current]);
+    slides[current].classList.add('is-current');
+    count.textContent = (current + 1) + ' / ' + slides.length;
+    preloadNext();
+  }
+
+  root.querySelector('.slideshow-prev').addEventListener('click', function (e) { e.preventDefault(); show(current - 1); });
+  root.querySelector('.slideshow-next').addEventListener('click', function (e) { e.preventDefault(); show(current + 1); });
+  root.querySelector('.slideshow-frame').addEventListener('click', function () { show(current + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target.closest && e.target.closest('input, textarea')) return;
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+
+  preloadNext();
+})();
+</script>
+</div>

@@ -31,3 +31,13 @@ presets:
     size: 200px
     sizes:
       phone: calc(50vw - 24px)
+
+  # Photos in previous / next slideshows (_includes/slideshow.html)
+  slideshow:
+    widths: [400, 600, 800, 1200]
+    fallback_width: 800
+    size: 600px
+    sizes:
+      phone: calc(100vw - 32px)
+    attributes:
+      img: 'loading="lazy"'   # hidden slides only download when shown
