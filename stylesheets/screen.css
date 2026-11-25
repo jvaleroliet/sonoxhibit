@@ -522,6 +522,7 @@ li span.active,
   width: 60%;
   font-size: 18px;
   line-height: 1.15em;
+  /* text-align: justify; */
 }
 /* ============================================
    CONTAINER & PADDING
@@ -535,7 +536,11 @@ li span.active,
 /* this is where you pad them separately */
 #index .container { }
 
-#exhibit .container { }
+#exhibit .container {
+  max-width: 1200px;   /* how wide the column can get */
+  /* margin-left: auto;   
+  margin-right: auto; */
+}
 
 /* ============================================
    BLOG STYLING
