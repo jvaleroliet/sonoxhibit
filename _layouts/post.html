@@ -9,7 +9,7 @@
 	<meta name='description' content="{{ page.content | strip_html | normalize_whitespace | truncate: 155 | escape }}" />
 	<meta name='author' content="{{ site.author }}" />
 	<meta name='generator' content="Jekyll" />
-	<link rel='stylesheet' href='/stylesheets/screen.css' type='text/css' />
+	<link rel='stylesheet' href='/stylesheets/screen.css?v={{ site.time | date: '%s' }}' type='text/css' />
 </head>
 <body class='blog-page format-blog'>
 	<!-- Mobile header -->
