@@ -1,0 +1,82 @@
+# Links shown on sonomayrit.com/links/ (replaces Linktree).
+#
+# The page shows the sections top to bottom, in this order.
+# A section can have a title (shown as a heading) or no title.
+# To add a link, copy a "- title / url" pair and change it.
+# "image:" is optional: a photo from src/Images/unprocessed/,
+# shown as a small square thumbnail on the button.
+# Add "featured: true" (together with an image) to make a link a big
+# card with the photo across the top and the title below.
+
+# Small links under the title, at the top of the page
+header:
+  - title: ➢ soundcloud
+    url: https://soundcloud.com/sonomayrit
+  - title: ➢ website
+    url: /
+
+sections:
+  - title: "♫ soundmaps"
+    links:
+      - title: ACUSTIKAS
+        url: /exhibit/ACUSTIKAS.html
+        image: projects/ACUSTIKAS1.JPG
+        featured: true
+
+  - title: "♫ aguaespejo: radio alhara monthly"
+    links:
+      - title: "international solidarity w/ gabriel sabot, 15.11.26"
+        image: projects/radioalhara/2611.png
+        url: https://soundcloud.com/sonomayrit/international-solidarity
+        featured: true
+      - title: "spanish revolution w/ gabriel sabot, 22.09.26"
+        image: projects/radioalhara/2609.png
+        url: https://soundcloud.com/sonomayrit/spanish-revolution
+      - title: "cencerros, 21.06.26"
+        image: projects/radioalhara/2606.png
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo
+      - title: "mediaphone/tape, 22.02.25"
+        url: https://soundcloud.com/sonomayrit/mediaphone-tape
+        image: projects/radioalhara/2602.png
+      - title: "mediaphone/shellac, 23.01.25"
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-mediaphoneshellac-radio-alhara-230125
+        image: projects/radioalhara/2601.png
+      - title: "mediaphone/wax, 21.12.25"
+        url: https://soundcloud.com/sonomayrit/db9b6858-8f45-45a4-a1f7-b6eef06e2989
+        image: projects/radioalhara/2512.png
+      - title: "urbs soni, 16.11.25"
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-urbs-soni-radio-alhara-161125
+        image: projects/radioalhara/2511.png
+      - title: "tape zin:es, 21.09.25"
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-tape-zines-radio-alhara-210925
+        image: projects/radioalhara/2509.png
+      - title: "viajes del agua, 17.08.2025"
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-viajes-del-agua-radio-alhara-17082025
+        image: projects/radioalhara/2508.png
+      - title: "soledad sonora, 31.07.2025"
+        url: https://soundcloud.com/sonomayrit/sono-mayrit-aguaespejo-soledad-sonora-radio-alhara-31072025
+        image: projects/radioalhara/2507.png
+      - title: "salterio noise,  21.05.25"
+        url: https://on.soundcloud.com/8xbTxHUYomus9Pfg6
+        image: projects/radioalhara/2505.png
+
+  - title: "♫ radio mixes & live"
+    links:
+      - title: "radio interferences listening session at migas 01.10.25"
+        url: https://soundcloud.com/migasberlin/sono-mayrit-radio-interferences-listening-session-at-migas-011025
+        image: projects/estrecho1.JPG
+        featured: true
+      - title: "listening session @migas"
+        url: /exhibit/migas.html
+        image: projects/migas2.jpg
+      - title: "Sono Mayrit @ Brixton Radio 06.06.2025"
+        image: projects/haroun.jpg
+        url: https://on.soundcloud.com/1tr6siSYcG3qVGOu0H
+      - title: "Black Med ep. 15 @stegi.radio"
+        url: /exhibit/blackmed.html
+        image: projects/stegi_nlack_med.jpg
+
+  - links:
+      - title: "♫ radio flouka residency (2023 - 2024)"
+        url: https://on.soundcloud.com/7Nqzn
+        image: projects/fliyer.jpg

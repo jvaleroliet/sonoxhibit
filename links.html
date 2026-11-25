@@ -1,0 +1,43 @@
+---
+layout: null
+permalink: /links/
+title: links
+---
+<!doctype html>
+<html lang='en-us'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>{{ site.title }} - links</title>
+	<meta name='description' content="Radio shows, mixes and projects by {{ site.title }}." />
+	<meta name='author' content="{{ site.author }}" />
+	<link rel='stylesheet' href='/stylesheets/screen.css' type='text/css' />
+</head>
+<body class='links-page'>
+	<main class='links'>
+		<h1 class='links-title'><a href='/'>{{ site.title }}</a></h1>
+		<ul class='links-header'>
+			{% for link in site.data.links.header %}
+			<li><a href='{{ link.url }}'>{{ link.title | escape }}</a></li>
+			{% endfor %}
+		</ul>
+
+		{% for section in site.data.links.sections %}
+		<section class='links-section'>
+			{% if section.title %}<h2 class='links-section-title'>{{ section.title | escape }}</h2>{% endif %}
+			<ul>
+				{% for link in section.links %}
+				{% if link.featured and link.image %}
+				<li><a class='link-button featured' href='{{ link.url }}'>{% picture featured "{{ link.image }}" 16:9 %}<span class='link-featured-title'>{{ link.title | escape }}</span></a></li>
+				{% else %}
+				<li><a class='link-button{% if link.image %} has-image{% endif %}' href='{{ link.url }}'>{% if link.image %}{% picture thumb "{{ link.image }}" 1:1 %}{% endif %}<span class='link-label'>{{ link.title | escape }}</span></a></li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+		</section>
+		{% endfor %}
+
+	</main>
+	<script data-goatcounter="https://sonomayrit.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

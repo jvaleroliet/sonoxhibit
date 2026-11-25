@@ -1,0 +1,21 @@
+# jekyll_picture_tag presets.
+# "default" is not defined here, so normal photos keep the plugin's
+# built-in sizes (400, 600, 800, 1000 px).
+
+media_queries:
+  mobile: "max-width: 552px"
+
+presets:
+  # Small square thumbnails for the /links/ page
+  thumb:
+    widths: [128, 192]
+    fallback_width: 128
+    size: 64px
+
+  # Big images for "featured" links on the /links/ page
+  featured:
+    widths: [520, 1040]
+    fallback_width: 520
+    size: 520px
+    sizes:
+      mobile: calc(100vw - 34px)
