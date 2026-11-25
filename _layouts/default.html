@@ -43,7 +43,7 @@
 				</div>
 				{% for section in site.categories.section %}
 					<ul class='section' id='section_{{ section.id }}'>
-						<li><span id='section_title_{{ section.id }}' class='section_title'>&#42{{ section.title }}</span>
+						<li><span id='section_title_{{ section.id }}' class='section_title'>*{{ section.title }}</span>
 						{% for exhibit in site.categories.exhibit %}
 							<ul>
 							{% if exhibit.section == section.title and exhibit.hidden != true  %}

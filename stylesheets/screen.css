@@ -147,8 +147,8 @@ body.visual_index { /* background: green; */ }
    ============================================ */
 
 body {
-  font-size: 14px;
-  font-family: 'Suisse', sans-serif;
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background: #fff;
   color: #000;
   line-height: 1.3em;
@@ -160,6 +160,7 @@ body {
 a:link {
   text-decoration: none;
   color: #666;
+
 }
 
 a:active {
@@ -174,6 +175,8 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+  background-color: #00fff7;
+
 }
 
 .top a:hover {
@@ -359,9 +362,9 @@ div[style*="max-width"] {
 #index ul.section span.section_title a {
   cursor: pointer;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  font-family: 'Neureal', monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* styles for hovering section titles */
@@ -432,8 +435,8 @@ div[style*="max-width"] {
 /* top/bot divs - not really used but do exist */
 #index .top {
   /* height: 36px; */
-  font-family: 'Neureal', monospace;
-  font-size: 26px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
 #exhibit .top {
@@ -441,14 +444,16 @@ div[style*="max-width"] {
 }
 
 .page-title {
-  font-family: 'Neureal', monospace;
-  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
   margin-bottom: 18px;
+  font-weight: bold;
 }
 
 #index .bot {
   /* font-style: italic; */
-  margin-top: 80px;
+  margin-top: auto;   /* push the footer to the bottom of the sidebar */
+  padding-top: 80px;  /* minimum gap when the list is long */
   line-height: 1.2em;
 }
 
@@ -520,9 +525,9 @@ li span.active,
 
 #exhibit p{
   width: 60%;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.15em;
-  /* text-align: justify; */
+  text-align: justify;
 }
 /* ============================================
    CONTAINER & PADDING
@@ -534,10 +539,15 @@ li span.active,
 }
 
 /* this is where you pad them separately */
-#index .container { }
+#index .container {
+  display: flex;
+  flex-direction: column;  /* stack children vertically */
+  min-height: 100%;        /* at least as tall as the sidebar */
+  box-sizing: border-box;  /* include padding in that 100% */
+}
 
 #exhibit .container {
-  max-width: 1200px;   /* how wide the column can get */
+  max-width: 1000px;   /* how wide the column can get */
   /* margin-left: auto;   
   margin-right: auto; */
 }
@@ -1381,7 +1391,7 @@ h3.entry-title {
   }
 
   #index .bot {
-    margin-top: 40px;
+    padding-top: 40px;
   }
 
   #index .container,

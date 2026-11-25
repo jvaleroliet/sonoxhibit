@@ -33,15 +33,5 @@ picture:
   suppress_warnings: true
   disabled: false
     
-  presets:
-    jpt-webp:
-      media_queries:
-        default:
-          width: [400, 800, 1200, 1600]
-          format: webp
-          quality: 10
-        fallback:
-          width: [400, 800, 1200, 1600]
-          format: jpg
-          quality: 85
+
   

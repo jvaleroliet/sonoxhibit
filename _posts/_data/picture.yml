@@ -1,0 +1,6 @@
+presets:
+  default:
+    widths: [600, 1000, 1600, 2400]   # sizes to generate
+    fallback_width: 1600              # used by browsers that ignore srcset
+    formats: [webp, original]         # webp first (smaller files), jpeg as backup
+    quality: 85                       # 0–100; 80–90 is a good range
