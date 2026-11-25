@@ -43,7 +43,7 @@ Notes and info [here.]({{site.url}}/exhibit/Interferences){:target="_blank"}
 <br>
 
 ## mediaphone/wax
-    {% picture  "projects/radioalhara/2512.png" %}
+{% picture  "projects/radioalhara/2512.png" %}
 
 Notes and info [here.]({{site.url}}/exhibit/Radio-Alhara2512){:target="_blank"}
 
