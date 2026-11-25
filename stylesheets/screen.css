@@ -261,6 +261,43 @@ h4 {
   margin-top: 0.5em;
 }
 
+/* Lists with blank lines between items (like tracklists) wrap each item in a
+   paragraph. The list is already text-column wide, so the paragraph inside
+   must fill the list, not be 60% of it again. Same for nested lists. */
+#exhibit li p,
+#exhibit li ul,
+#exhibit li ol {
+  width: auto;
+}
+
+/* Include the list indent in its width, so lists end where the text ends */
+#exhibit ul,
+#exhibit ol {
+  box-sizing: border-box;
+}
+
+#exhibit li p {
+  margin-bottom: 0.5em;
+}
+
+/* Embeds (SoundCloud, YouTube, Bandcamp...): same width as the text column,
+   whatever width the embed code asks for. */
+#exhibit iframe {
+  width: 60% !important;
+  max-width: 100%;
+}
+
+/* The small "artist · track" credit line SoundCloud puts under its player */
+#exhibit iframe + div {
+  width: 60%;
+}
+
+#exhibit iframe[src*="youtube"],
+#exhibit iframe[src*="vimeo"] {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 /* image styling */
 #exhibit img {
   border: 1px solid #000;
@@ -1238,14 +1275,11 @@ textarea {
 
   /* Embeds (SoundCloud, YouTube, Bandcamp...) - full width, no overflow */
   #exhibit iframe {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
   }
 
-  #exhibit iframe[src*="youtube"],
-  #exhibit iframe[src*="vimeo"] {
-    height: auto;
-    aspect-ratio: 16 / 9;
+  #exhibit iframe + div {
+    width: 100%;
   }
 
   #exhibit .container #img-container {
